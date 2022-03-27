@@ -1,1 +1,1 @@
-# -election-day-counter
+# election-day-counter
