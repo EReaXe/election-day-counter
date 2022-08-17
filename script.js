@@ -12,7 +12,7 @@
         distance = countDown - now;
 
       
-      (document.getElemtById("months").innerText = Math.floor(distance / month)),
+      (document.getElementById("months").innerText = Math.floor(distance / month)),
         (document.getElementById("days").innerText = Math.floor(
           (distance % month) / day
         )),
