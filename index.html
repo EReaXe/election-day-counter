@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <title>Genel Seçimlere Kalan Süre</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Secim Gunu" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link
+      href=""
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href=""
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href=""
+      media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href=""
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href=""
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href=""
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href=""
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link rel="apple-touch-icon" sizes="128x128" href="./pwa/img/image.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="128x128"
+      href="./pwa/img/image.png"
+    />
+    <link rel="icon" sizes="192x192" href="./pwa/img/image.png" />
+    <link rel="icon" sizes="128x128" href="./pwa/img/image.png" />
+
+    <!-- SW -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./sw.js?v=7");
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 id="headline">Genel Seçimlere Kalan Süre</h1>
+      <div id="countdown">
+        <ul>
+          <li><span id="months"></span>ay</li>
+          <li><span id="days"></span>gün</li>
+          <li><span id="hours"></span>saat</li>
+          <li><span id="minutes"></span>dakika</li>
+          <li><span id="seconds"></span>saniye</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
