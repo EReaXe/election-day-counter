@@ -5,7 +5,7 @@
     day = hour * 24,
     month = day * 30;
 
-  let new_year = "June 18, 2023 08:00:00",
+  let new_year = "June 18, 2019 08:00:00",
     countDown = new Date(new_year).getTime(),
     x = setInterval(function () {
       let now = new Date().getTime(),
