@@ -11,8 +11,9 @@
       let now = new Date().getTime(),
         distance = countDown - now;
 
-      
-      (document.getElementById("months").innerText = Math.floor(distance / month)),
+      (document.getElementById("months").innerText = Math.floor(
+        distance / month
+      )),
         (document.getElementById("days").innerText = Math.floor(
           (distance % month) / day
         )),
@@ -24,8 +25,7 @@
         )),
         (document.getElementById("seconds").innerText = Math.floor(
           (distance % minute) / second
-          ));
-      
+        ));
 
       //do something later when date is reached
       if (distance < 0) {
