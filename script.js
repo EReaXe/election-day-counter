@@ -33,7 +33,8 @@
           countdown = document.getElementById("countdown"),
           content = document.getElementById("content");
 
-        headline.innerText = "Seçim Günü 🎉";
+        //headline.innerText = "Seçim Günü 🎉";
+        headline.innerText = "Site bakımda";
         countdown.style.display = "none";
         content.style.display = "block";
 
