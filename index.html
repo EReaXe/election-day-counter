@@ -6,7 +6,7 @@
     <title>Genel Seçimlere Kalan Süre</title>
 
     <!-- PWA -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Secim Gunu" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -45,20 +45,20 @@
       media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image"
     />
-    <link rel="apple-touch-icon" sizes="128x128" href="/pwa/img/image.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="./pwa/img/image.png" />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="128x128"
-      href="/pwa/img/image.png"
+      href="./pwa/img/image.png"
     />
-    <link rel="icon" sizes="192x192" href="/pwa/img/image.png" />
-    <link rel="icon" sizes="128x128" href="/pwa/img/image.png" />
+    <link rel="icon" sizes="192x192" href="./pwa/img/image.png" />
+    <link rel="icon" sizes="128x128" href="./pwa/img/image.png" />
 
     <!-- SW -->
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register("/sw.js?v=7");
+          navigator.serviceWorker.register("./sw.js?v=7");
         });
       }
     </script>
