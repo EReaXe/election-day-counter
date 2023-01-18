@@ -4,7 +4,7 @@
     hour = minute * 60,
     day = hour * 24;
 
-  let new_year = "June 18, 2023 08:00:00",
+  let new_year = "May 15, 2023 08:00:00",
     countDown = new Date(new_year).getTime(),
     x = setInterval(function () {
       let now = new Date().getTime(),
