@@ -72,6 +72,7 @@
           font-size: 3.375rem;
         }
       }
+
       #old-results {
         background-color: #4caf50; /* Yeşil renk */
         color: white;
@@ -91,27 +92,6 @@
 
       #old-results:hover {
         background-color: #3e8e41;
-      }
-
-      .president-info {
-        position: absolute;
-        top: 20px;
-        right: 0;
-        color: white;
-        border: 2px solid white;
-        padding: 10px;
-      }
-
-      .president-info img {
-        width: 150px;
-        height: auto;
-        margin-right: 10px;
-      }
-
-      .president-info h2 {
-        display: inline-block;
-        vertical-align: top;
-        margin: 0;
       }
     </style>
     <meta charset="UTF-8" />
@@ -133,15 +113,6 @@
         Eski Seçim Sonuçları
       </button>
     </div>
-
-    <!-- <div class="president-info">
-      <img
-        src="https://www.tccb.gov.tr/assets/resim/genel/receptayyiperdogan-bio.jpg"
-        alt="Eski Başkan"
-      />
-
-      <h2>Mevcut Cumhurbaşkanı: Recep Tayyip Erdoğan</h2>
-    </div> -->
 
     <script>
       (function () {
@@ -187,6 +158,51 @@
 
       function goToOldResults() {
         window.open("https://www.sabah.com.tr/secim-sonuclari", "_blank");
+      }
+
+      // Konsol Soru-Cevap
+      console.log("Lütfen oyunu oyna!");
+      console.log("Konsol kısmına 'play()' yazın ve Enter'a basın.");
+
+      function play() {
+        console.log("OYUN BAŞLADI!");
+        var score = 0;
+        var question;
+        var answer;
+        var input;
+        var questions = [
+          {
+            question: "En yüksek dağ hangisidir?",
+            answer: "Everest",
+          },
+          {
+            question: "En büyük okyanus hangisidir?",
+            answer: "Pasifik Okyanusu",
+          },
+          {
+            question: "En küçük kontinent hangisidir?",
+            answer: "Avustralya",
+          },
+          {
+            question: "En uzun nehir hangisidir?",
+            answer: "Nil Nehri",
+          },
+          {
+            question: "En çok nüfuslu ülke hangisidir?",
+            answer: "Çin",
+          },
+        ];
+        for (var i = 0; i < questions.length; i++) {
+          question = questions[i].question;
+          answer = questions[i].answer;
+          input = prompt(question).toLowerCase();
+          if (input === answer.toLowerCase()) {
+            console.log("Doğru cevap! Skorun: " + ++score);
+          } else {
+            console.log("Yanlış cevap. Skorun: " + score);
+          }
+        }
+        console.log("Oyun bitti. Skorun: " + score);
       }
     </script>
   </body>
