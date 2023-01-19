@@ -6,6 +6,4 @@ saniye tıklanıcak saniye video
 
 alt+f4
 
-rte yazında bi video
-
 oy butonu ve oy ver videosu
