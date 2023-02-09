@@ -4,7 +4,7 @@
     hour = minute * 60,
     day = hour * 24;
 
-  let secim = "May 14, 2023 08:00:00",
+  let secim = "Feb 6, 2023 04:00:00",
     countDown = new Date(secim).getTime(),
     x = setInterval(function () {
       let now = new Date().getTime(),
