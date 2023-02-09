@@ -27,7 +27,7 @@
           countdown = document.getElementById("countdown"),
           content = document.getElementById("content");
 
-        headline.innerText = "Seçim Günü 🎉";
+        headline.innerText = "Geçmiş Olsun Türkiye🎗";
         countdown.style.display = "none";
         content.style.display = "block";
 
