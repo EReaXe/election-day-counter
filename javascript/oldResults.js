@@ -1,3 +1,3 @@
 function goToOldResults() {
-  window.open("https://www.sabah.com.tr/secim-sonuclari", "_blank");
+  window.open("https://ahbap.org/bagisci-ol", "_blank");
 }
