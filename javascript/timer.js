@@ -4,7 +4,7 @@
     hour = minute * 60,
     day = hour * 24;
 
-  let secim = "Feb 6, 2023 04:00:00",
+  let secim = "May 14, 2023 08:00:00",
     countDown = new Date(secim).getTime(),
     x = setInterval(function () {
       let now = new Date().getTime(),
@@ -27,7 +27,7 @@
           countdown = document.getElementById("countdown"),
           content = document.getElementById("content");
 
-        headline.innerText = "Geçmiş Olsun Türkiye🎗";
+        headline.innerText = "Seçim!";
         countdown.style.display = "none";
         content.style.display = "block";
 
