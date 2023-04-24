@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seçimlere Ne Kadar Kaldı?</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <div class="container">
-      <h1 id="headline">Seçimlere Ne Kadar Kaldı?</h1>
-      <div id="countdown">
-        <ul>
-          <li><span id="days"></span>gün</li>
-          <li><span id="hours"></span>saat</li>
-          <li><span id="minutes"></span>dakika</li>
-          <li><span id="seconds"></span>saniye</li>
-        </ul>
+      <h1>Seçimlere Ne Kadar Kaldı?</h1>
+      <ul>
+        <li>
+          <span id="days">00</span>
+          <div>gün</div>
+        </li>
+        <li>
+          <span id="hours">00</span>
+          <div>saat</div>
+        </li>
+        <li>
+          <span id="minutes">00</span>
+          <div>dakika</div>
+        </li>
+        <li>
+          <span id="seconds">00</span>
+          <div>saniye</div>
+        </li>
+      </ul>
+      <div class="btn-container">
+        <button id="destek">Katkıda Bulun</button>
+        <button id="sonuclar">Seçim Sonuçları</button>
+        <button id="others">Diğer Projeler</button>
       </div>
     </div>
-
-    <!-- <audio controls autoplay loop>
-      <source src="assets/music.mp3" type="audio/mpeg" />
-      Tarayıcınız bu ses dosyasını desteklemiyor.
-    </audio> -->
-
     <script src="./javascript/timer.js"></script>
-    <script src="./javascript/oldResults.js"></script>
     <script src="./javascript/miniConsoleGame.js"></script>
     <script src="./javascript/rte.js"></script>
+    <script src="./javascript/button.js"></script>
   </body>
 </html>

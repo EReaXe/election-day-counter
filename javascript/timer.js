@@ -1,38 +1,32 @@
-(function () {
-  const second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
+// Seçim tarihini burada ayarlayın
+var electionDate = new Date("May 14, 2023 08:00:00");
 
-  let secim = "May 14, 2023 08:00:00",
-    countDown = new Date(secim).getTime(),
-    x = setInterval(function () {
-      let now = new Date().getTime(),
-        distance = countDown - now;
+// HTML'de tanımlanan sayaç öğelerine referans
+var daysElem = document.getElementById("days");
+var hoursElem = document.getElementById("hours");
+var minutesElem = document.getElementById("minutes");
+var secondsElem = document.getElementById("seconds");
 
-      (document.getElementById("days").innerText = Math.floor(distance / day)),
-        (document.getElementById("hours").innerText = Math.floor(
-          (distance % day) / hour
-        )),
-        (document.getElementById("minutes").innerText = Math.floor(
-          (distance % hour) / minute
-        )),
-        (document.getElementById("seconds").innerText = Math.floor(
-          (distance % minute) / second
-        ));
+// Sayaç işlemini yapan fonksiyon
+function updateCountdown() {
+  // Şimdiki tarihi al
+  var now = new Date();
 
-      //do something later when date is reached
-      if (distance < 0) {
-        let headline = document.getElementById("headline"),
-          countdown = document.getElementById("countdown"),
-          content = document.getElementById("content");
+  // Kalan süreyi hesapla
+  var timeRemaining = electionDate - now;
 
-        headline.innerText = "Seçim!";
-        countdown.style.display = "none";
-        content.style.display = "block";
+  // Kalan süreden gün, saat, dakika ve saniyeleri hesapla
+  var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+  var minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
+  var seconds = Math.floor((timeRemaining / 1000) % 60);
 
-        clearInterval(x);
-      }
-      //seconds
-    }, 0);
-})();
+  // Sayaç öğelerinde kalan süreyi güncelle
+  daysElem.innerText = days < 10 ? "0" + days : days;
+  hoursElem.innerText = hours < 10 ? "0" + hours : hours;
+  minutesElem.innerText = minutes < 10 ? "0" + minutes : minutes;
+  secondsElem.innerText = seconds < 10 ? "0" + seconds : seconds;
+}
+
+// Sayaç işlevini her saniyede bir çağıran bir zamanlayıcı başlat
+setInterval(updateCountdown, 1000);
