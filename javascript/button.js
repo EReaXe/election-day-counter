@@ -1,5 +1,5 @@
 function Sonuc() {
-  window.location.href = "../sonuclar/index.html";
+  window.location.href = "https://ereaxe.github.io/election-day-counter/sonuclar/";
 }
 
 function Other() {
