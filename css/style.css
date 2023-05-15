@@ -1,126 +1,69 @@
+/* Tüm elemanlara varsayılan ayarları uygula */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body öğesi için ayarları uygula */
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
-  text-align: center;
-  color: #fff;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-ul {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style-type: none;
-  margin-bottom: 30px;
+  height: 100vh;
 }
 
-ul li {
-  flex-basis: 25%;
-  max-width: 25%;
+/* Container elemanları için ayarları uygula */
+.container {
   text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px;
 }
 
-ul li span {
-  display: block;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #fff;
+/* Başlık elemanları için ayarları uygula */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Listeleme elemanları için ayarları uygula */
+ul {
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+li {
   margin-bottom: 10px;
 }
 
-ul li:last-child {
-  border-right: none;
+span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+div {
+  font-size: 14px;
+  color: #777;
 }
 
-.btn-container button {
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-container button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-#old-results {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#old-results:hover {
-  background-color: #555;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  margin-right: 10px;
-}
-
-.btn:hover {
-  background-color: #555;
-}
-
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  ul li span {
-    font-size: 3rem;
-  }
-
-  #old-results,
-  .btn {
-    font-size: 1rem;
-    padding: 8px 16px;
+/* Ekran genişliği 600 pikselden küçükse (mobil cihazlar için) */
+@media (max-width: 600px) {
+  /* Container elemanları için ayarları güncelle */
+  .container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 10px;
   }
 }
