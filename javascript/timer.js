@@ -1,6 +1,6 @@
 // Seçim tarihini burada ayarlayın
-var electionDate1 = new Date("May 28, 2023 08:00:00");
-var electionDate2 = new Date("March 31, 2024 08:00:00");
+var electionDate1 = new Date("March 31, 2024 08:00:00");
+var electionDate2 = new Date("June 25, 2028 08:00:00");
 var electionDate3 = new Date("June 25, 2028 08:00:00");
 
 // A tanımlanan sayaç öğelerine referans
