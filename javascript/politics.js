@@ -29,8 +29,17 @@
   }
   const date = new Intl.DateTimeFormat('tr-TR', {day:'numeric', month:'long', year:'numeric', timeZone:'Europe/Istanbul'}).format(new Date(data.asOf + 'T12:00:00+03:00'));
   $('#snapshot-date').textContent = 'Kaynak okuma · ' + date;
-  const districtKnown = data.districts.filter(d => d.mayor).length;
-  $('#coverage-note').textContent = `81 il ve ${data.districts.length} ilçe listelenir. ${districtKnown} ilçede başkan kaydı bulunuyor; diğer ilçelerde resmî doğrulama bekleniyor. İl belediyelerinde İstanbul ve İzmir resmî listelerden, diğer iller resmî teyit bekleyen derlemeden gösterilir. Bu bir canlı veri yayını değildir.`;
+  const quality = window.DATA_QUALITY.summarize(data);
+  $('#coverage-note').textContent = `81 il ve ${quality.districtTotal} ilçe listelenir. ${quality.districtRecords} ilçede başkan kaydı var; ${quality.districtMissing} ilçede kayıt eksik. ${quality.officialDistricts} ilçe kaydı resmî listelerden, ${quality.compilationDistricts} kayıt teyit bekleyen derlemelerden geliyor. Canlı veri yayını değildir.`;
+  for (const [number,label] of [[quality.officialDistricts,'Resmî kaynaklı ilçe'],[quality.districtMissing,'Eksik ilçe kaydı'],[quality.conflicts,'Çözülemeyen çelişki'],[quality.independentlyVerified,'Bağımsız doğrulama']]) {
+    const metric=el('div','quality-metric'); metric.append(el('strong','',number),el('span','',label)); $('#quality-metrics').append(metric);
+  }
+  const conflictEntities=data.provinces.filter(p=>p.mayor.verification==='conflict');
+  for(const province of conflictEntities) {
+    const issue=el('div','quality-issue'); issue.append(el('strong','',province.name+' · Parti bilgisi çelişkili'),el('p','',province.mayor.conflictNote));
+    for(const claim of province.mayor.claims) { const line=el('p','');line.append(link(claim.sourceLabel+' ↗',claim.source),document.createTextNode(' · '+(claim.party || 'Belirtilmedi')));issue.append(line); }
+    $('#quality-issues').append(issue);
+  }
 
   const president = el('article', 'summary-card');
   const profile = el('div');
@@ -47,9 +56,12 @@
   if (!data.provinces.some(p => p.id === selected)) selected = 34;
   let mode = 'municipality';
   let filter = '';
+  let includeCompilations = false;
   const mpGroups = new Map(data.provinces.map(p => [p.id, data.mps.filter(m => m.provinceId === p.id)]));
   function provinceParty(province) {
     if (mode === 'municipality') {
+      if (province.mayor.verification === 'conflict') return 'Kaynaklar çelişiyor';
+      if (province.mayor.verification !== 'primary' && !includeCompilations) return 'Resmî teyit bekleniyor';
       if (/kayy[ıu]m|atanm/i.test(province.mayor.role)) return 'Atanmış yönetim';
       return province.mayor.party || 'Bilgi bekleniyor';
     }
@@ -86,7 +98,7 @@
       parties.forEach(p => { const option = el('option', '', p); option.value = p; $('#party-filter').append(option); });
     }
     $('#map-explanation').textContent = mode === 'municipality'
-      ? 'Renkler il / büyükşehir belediyesinin kaynakta belirtilen parti kaydını gösterir. Büyükşehir olmayan illerde il merkezini temsil eder. Derleme kayıtları resmî teyit bekler.'
+      ? 'Varsayılan görünüm yalnızca resmî listelerdeki parti bildirimlerini renklendirir. Çelişkili ve teyit bekleyen kayıtlar nötrdür. Büyükşehir olmayan illerde il merkezini temsil eder.'
       : 'Renkler ilin mevcut milletvekilleri arasında en çok sandalyeye sahip partiyi gösterir; oy oranı veya belediye yönetimi değildir. Eşitlikler ayrı renktedir.';
     shapes.forEach(shape => {
       const province = data.provinces.find(p => p.id === Number(shape.dataset.plakakodu));
@@ -107,9 +119,25 @@
     $('#map-hover').textContent = province.name + ' · ' + provinceParty(province);
   }
   function personRecord(record, container, heading = false) {
-    container.append(el('p', 'person-role', record.role), el(heading ? 'h4' : 'p', heading ? '' : 'row-name', record.name), pill(record.party || 'Bilgi bekleniyor'));
+    container.append(el('p', 'person-role', record.role), el(heading ? 'h4' : 'p', heading ? '' : 'row-name', record.name));
+    const current=el('div','party-field');current.append(el('span','field-label','Güncel parti · '),pill(record.currentParty || (record.verification==='conflict' ? 'Kaynaklar çelişiyor' : 'Doğrulanmadı')));container.append(current);
+    if(record.verification==='secondary' && record.party) container.append(el('p','verification','Derlemenin bildirdiği parti: '+record.party));
+    container.append(el('p','verification','Seçildiği parti: '+(record.electedParty || 'Henüz doğrulanmadı')));
+    if(record.conflictNote) container.append(el('p','conflict-note',record.conflictNote));
     const source = el('p', 'source-line'); source.append(link(record.sourceLabel + ' ↗', record.source)); container.append(source);
-    container.append(el('span', 'verification', record.verification === 'secondary' ? 'Derleme kaydı · Resmî teyit bekleniyor' : 'Resmî kaynak kaydı · Kaynak okuma: ' + date));
+    container.append(el('span', 'verification', record.verification === 'conflict' ? 'Çelişki çözülene kadar kesin parti gösterilmez.' : record.verification === 'secondary' ? 'Derleme kaydı · Resmî teyit bekleniyor' : 'Resmî kaynağın bildirimi · Bağımsız doğrulama yapılmadı'));
+    const readDate=record.retrievedAt || data.asOf;
+    container.append(el('span','verification','Kaynak okuma: '+readDate+' · Son bağımsız doğrulama: '+(record.lastVerifiedAt || 'Yok')));
+    if(window.DATA_QUALITY.freshness(record)==='review-due') container.append(el('span','stale-note','Kaynak 30 günden uzun süredir yeniden kontrol edilmedi.'));
+    if(record.claims?.length>1) {
+      const details=el('details','record-evidence');details.append(el('summary','','Kaynak bildirimleri ('+record.claims.length+')'));
+      for(const claim of record.claims) {
+        const line=el('p','source-line');line.append(link(claim.sourceLabel+' ↗',claim.source),document.createTextNode(' · '+claim.name+' · '+(claim.party || 'Parti belirtilmedi')+' · Okuma: '+claim.retrievedAt));
+        if(claim.availability==='unavailable') line.append(document.createTextNode(' · Sayfa erişilemiyor; arama dizini kaydı'));
+        details.append(line);
+      }
+      container.append(details);
+    }
   }
   function renderDistricts() {
     const query = $('#district-search').value.trim().toLocaleLowerCase('tr-TR');
@@ -152,6 +180,7 @@
   }
   $('#province-select').addEventListener('change', event => selectProvince(Number(event.target.value)));
   $('#map-mode').addEventListener('change', event => { mode = event.target.value; renderMap(true); });
+  $('#include-compilations').addEventListener('change', event => { includeCompilations=event.target.checked;renderMap(true); });
   $('#party-filter').addEventListener('change', event => { filter = event.target.value; renderMap(); });
   $('#district-search').addEventListener('input', renderDistricts);
   window.addEventListener('hashchange', () => selectProvince(Number(new URLSearchParams(location.hash.slice(1)).get('il')), false));

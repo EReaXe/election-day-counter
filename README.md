@@ -37,8 +37,22 @@ Bu proje herhangi bir resmî kurumla bağlantılı değildir.
 - Cumhurbaşkanı ve parti bilgisi
 - İl bağlantıları `#il=34` biçiminde paylaşılabilir
 
-Veri kapsamı **tam doğrulanmış güncel belediye rehberi değildir**. 973 ilçenin 119'unda başkan kaydı vardır. İstanbul / İzmir resmî listelerinden ve büyükşehir olmayan illerin Merkez kayıtlarından oluşur. Diğer ilçeler resmî doğrulama bekler. İstanbul ve İzmir dışındaki il başkanları resmî teyit bekleyen Vikipedi derlemesidir. Arayüz kaynakları ve kapsam sınırlarını gösterir; otomatik güncelleme yoktur.
+Veri kapsamı **tam doğrulanmış güncel belediye rehberi değildir**. 973 ilçenin 196'sında başkan kaydı vardır: 145 kayıt resmî listelerden, 51 Merkez ilçe kaydı teyit bekleyen derlemedendir. 777 ilçe kaydı eksiktir. İl belediyelerinde 4 resmî kaynaklı kayıt, 76 derleme kaydı ve 1 çözülemeyen parti çelişkisi vardır. Resmî kaynaklı olmak bağımsız doğrulama anlamına gelmez. Hiçbir belediye kaydına bağımsız doğrulama yapılmış gibi tarih atanmaz; otomatik güncelleme yoktur.
 
 `data/politics.json` makinece okunabilir veri kaydıdır. `javascript/politics-data.js` aynı verinin `file://` üzerinden de çalışması için betik sürümüdür. Veri güncellenirken ikisini birlikte üretin. `data/turkey.svg` ve `javascript/map-data.js` de aynı haritanın iki paketidir. Veri ve harita lisansları için `THIRD-PARTY.md` dosyasına bakın.
 
 Geliştirici kontrolleri: `npm install` ardından `npm test`. Bu kurulum yalnızca DOM testleri içindir; siteyi çalıştırmak için gerekmez. JSON / SVG kaynakları düzenlendikten sonra `npm run sync:data` betik paketlerini yeniden üretir ve veri tutarlılığını kontrol eder. DOM testleri görsel tarayıcı testinin yerine geçmez.
+
+
+## Veri güvenilirliği sözleşmesi (şema 3)
+
+- `officeHolder`: kaynağın bildirdiği görevi yürüten kişi ve unvan; seçilmiş başkanla aynı olduğu varsayılmaz.
+- `electedParty`: seçim kaynağıyla ayrıca belgelenmedikçe `null`.
+- `currentParty`: yalnızca çelişkisiz resmî kaynağın bildirimi; derleme veya çelişkili kayıtta `null`.
+- `claims`: her bildirimin kişi, parti, kaynak URL, kaynak türü ve okuma tarihi. Arama dizini kaydı doğrudan sayfa okumasından ayrılır.
+- `retrievedAt`: kaynağın okunduğu tarih. `lastVerifiedAt`: bağımsız doğrulama yapılmadığı sürece `null`.
+- `verification`: `primary` (resmî bildirim), `secondary` (derleme) veya `conflict` (çözülemeyen çelişki). `primary`, bağımsız doğrulama iddiası değildir.
+
+Varsayılan belediye haritası teyit bekleyen derlemeleri renklendirmez. Kullanıcı bunları isteğe bağlı açabilir; çelişkiler her iki durumda da nötrdür. 30 günden eski kaynak okuması detaylarda yeniden kontrol uyarısı alır.
+
+`data/quality-report.json` il bazında veri kapsamını sunar; `data/source-manifest.json` bu tur okunan resmî HTML dosyalarının SHA-256 parmak izlerini içerir. Parmak izleri resmî dijital imza değildir. `scripts/validate-data.cjs` bozuk tarih, tekrar eden kimlik, seçim kaynağı olmayan seçildiği parti, çelişkiye atanmış kesin parti ve tutarsız sandalye toplamını reddeder. `npm run sync:data` doğrulama geçmeden paket üretmez. `npm test` hem veri sözleşmesini hem DOM etkileşimlerini sınar.

@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict');
+const data=require('../data/politics.json');
+const {validate,validDate}=require('../scripts/validate-data.cjs');
+const {summarize,freshness}=require('../javascript/data-quality.js');
+assert(validate(data));
+assert.equal(validDate('2026-02-30'),false);
+assert.equal(validDate('2026-10-18'),true);
+const quality=summarize(data);
+assert.equal(quality.districtRecords+quality.districtMissing,973);
+assert.equal(quality.officialDistricts+quality.compilationDistricts,quality.districtRecords);
+assert.equal(quality.conflicts,1);
+assert.equal(quality.independentlyVerified,0);
+assert.equal(quality.electionPartyKnown,0);
+const izmir=data.provinces.find(p=>p.id===35).mayor;
+assert.equal(izmir.currentParty,null);
+assert(izmir.claims.some(c=>c.observationMethod==='search-index'&&c.availability==='unavailable'));
+function rejects(mutate,pattern) { const copy=structuredClone(data);mutate(copy);assert.throws(()=>validate(copy),pattern); }
+rejects(d=>{d.provinces.find(p=>p.id===35).mayor.currentParty='AK Parti';},/Çelişkili/);
+rejects(d=>{d.districts.push(d.districts[0]);},/kimlikleri/);
+rejects(d=>{d.provinces[0].mayor.electedParty='CHP';},/seçim kaynağı/);
+rejects(d=>{d.provinces[0].mayor.claims[0].source='javascript:alert(1)';},/kaynak URL/);
+rejects(d=>{d.provinces[0].mayor.retrievedAt='2026-02-30';},/tarihi/);
+rejects(d=>{d.seats[0].count++;},/Sandalye toplamı/);
+assert.equal(freshness({retrievedAt:'2026-10-18'},Date.parse('2026-10-20T12:00:00+03:00')),'recently-read');
+assert.equal(freshness({retrievedAt:'2026-10-18'},Date.parse('2026-11-19T12:00:00+03:00')),'review-due');
+assert.equal(freshness({retrievedAt:null}),'unknown');
+console.log('Kaynak sözleşmesi, çelişki, bozuk veri reddi, eksik kayıt ve eskime kontrolleri geçti.');
