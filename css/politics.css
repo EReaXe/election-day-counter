@@ -5,3 +5,6 @@
 @media(prefers-reduced-motion:reduce){.turkey-map path{transition:none}}
 
 .api-empty{min-height:190px;display:grid;place-items:center;text-align:center;border:1px dashed var(--border);border-radius:12px;padding:30px;font-size:13px;color:var(--muted);line-height:1.9}.api-unavailable .seat-total{display:none}
+
+.admin-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}.admin-facts div{min-width:0}.admin-facts dt{font-size:11px;color:var(--muted,#68776c)}.admin-facts dd{margin:4px 0 0;font-size:13px;font-weight:600;overflow-wrap:anywhere}.district-admin{width:100%}.settlement-browser{margin-top:12px;border-top:1px solid #dce4d8;padding-top:12px}.settlement-browser summary{cursor:pointer;font-size:12px;font-weight:600}.settlement-body input{box-sizing:border-box;width:100%;margin-top:12px;padding:11px;border:1px solid #dce4d8;border-radius:8px;background:#fff;font:inherit}.settlement-list{max-height:360px;overflow:auto}.settlement-row{display:grid;gap:4px;padding:12px 0;border-bottom:1px solid #e2e8df}.settlement-row strong{font-size:13px}.settlement-row span,.settlement-row small{font-size:11px;color:#607064}.settlement-body .share{margin-top:12px}.district-admin .source-line{overflow-wrap:anywhere}
+@media(max-width:480px){.admin-facts{gap:10px}.settlement-list{max-height:280px}}

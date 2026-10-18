@@ -1,14 +1,10 @@
 const assert=require('node:assert/strict');
-const {readOfficial,registry}=require('../scripts/refresh-official.cjs');
-const source=registry.sources[0];
+const {getJSON,BASE}=require('../scripts/refresh-turkiye.cjs');
 const response=(status,type,text)=>({ok:status===200,status,headers:new Headers({'content-type':type}),text:async()=>text});
 (async()=>{
- await assert.rejects(()=>readOfficial(source,async()=>response(200,'text/html','<html>Hata</html>')),/JSON dönmedi/);
- await assert.rejects(()=>readOfficial(source,async()=>response(503,'application/json','[]')),/HTTP 503/);
- await assert.rejects(()=>readOfficial(source,async()=>response(200,'application/json','bozuk')),SyntaxError);
- await assert.rejects(()=>readOfficial(source,async()=>{throw Error('Bağlantı kesildi');}),/Bağlantı kesildi/);
- await assert.rejects(()=>readOfficial({...source,endpoint:'https://example.com'},async()=>{throw Error('Çağrılmamalı');}),/İzin verilmeyen/);
- const result=await readOfficial(source,async(url,options)=>{assert.equal(url,source.endpoint);assert.equal(options.redirect,'error');assert.equal(options.headers.Accept,'application/json');return response(200,'application/json','[]');});
- assert.deepEqual(result.rows,[]);
- console.log('API HTTP hatası, HTML yanıtı, bozuk JSON, bağlantı hatası ve yönlendirme politikası kontrolleri geçti.');
-})().catch(error=>{console.error(error);process.exitCode=1;});
+ for(const [status,type,text,pattern]of [[503,'application/json','[]',/HTTP/],[200,'text/html','oops',/JSON/],[200,'application/json','broken',SyntaxError]])await assert.rejects(()=>getJSON(BASE+'/meta',async()=>response(status,type,text)),pattern);
+ for(const url of ['https://example.com/v2/meta',BASE+'/datasets/provinces.json?x=1',BASE+'/other'])await assert.rejects(()=>getJSON(url),/İzin verilmeyen/);
+ await assert.rejects(()=>getJSON(BASE+'/meta',async()=>{throw Error('offline');}),/offline/);
+ assert.deepEqual(await getJSON(BASE+'/meta',async(url,options)=>{assert.equal(options.redirect,'error');return response(200,'application/json','{"data":{}}');}),{data:{}});
+ console.log('API hata ve izin listesi kontrolleri geçti.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

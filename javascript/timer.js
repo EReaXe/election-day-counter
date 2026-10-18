@@ -27,7 +27,7 @@ function calendarEvent(title, target) {
 
 if (typeof document !== 'undefined') {
   const cards = Array.from(document.querySelectorAll('[data-election]')).map(card => {
-    const calendarEnabled = window.POLITICS_DATA?.sourcePolicy === 'official-api-only' && window.POLITICS_DATA?.availability?.calendar === true;
+    const calendarEnabled = window.POLITICS_DATA?.availability?.calendar === true;
     const target = calendarEnabled ? Date.parse(card.querySelector('time').dateTime) : NaN;
     const title = card.querySelector('h2').textContent;
     const calendar = card.querySelector('.calendar');

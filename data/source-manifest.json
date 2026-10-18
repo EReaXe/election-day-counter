@@ -1,13 +1,62 @@
 {
-  "policy": "official-api-only",
+  "policy": "user-selected-turkiyeapi",
+  "provider": {
+    "id": "turkiyeapi",
+    "name": "TurkiyeAPI",
+    "isGovernment": false,
+    "repository": "https://github.com/ubeydeozdmr/turkiye-api",
+    "docs": "https://docs.turkiyeapi.dev/",
+    "base": "https://api.turkiyeapi.dev/v2",
+    "datasetVersion": "2025",
+    "lastUpdated": "2026-05-21",
+    "observedAt": "2026-10-18T12:59:57.218Z",
+    "counts": {
+      "provinces": 81,
+      "districts": 973,
+      "municipalities": 1377,
+      "neighborhoods": 32279,
+      "villages": 18183
+    }
+  },
   "runs": [
     {
-      "sourceId": "izmir-council",
-      "endpoint": "https://acikveriwapi.izmir.bel.tr/IzBel/MeclisUyeleriniGetir",
-      "observedAt": "2026-10-18T12:52:10.820Z",
+      "sourceId": "turkiyeapi-provinces",
+      "endpoint": "https://api.turkiyeapi.dev/v2/datasets/provinces.json",
+      "observedAt": "2026-10-18T12:59:57.218Z",
       "status": "ok",
-      "imported": 30,
-      "sha256": "9234a13eca8ef176f973f851280da0c067c07ef6885b93d294082d5aa31fa742"
+      "imported": 81
+    },
+    {
+      "sourceId": "turkiyeapi-districts",
+      "endpoint": "https://api.turkiyeapi.dev/v2/datasets/districts.json",
+      "observedAt": "2026-10-18T12:59:57.218Z",
+      "status": "ok",
+      "imported": 973
+    },
+    {
+      "sourceId": "turkiyeapi-municipalities",
+      "endpoint": "https://api.turkiyeapi.dev/v2/datasets/municipalities.json",
+      "observedAt": "2026-10-18T12:59:57.218Z",
+      "status": "ok",
+      "imported": 1377
+    },
+    {
+      "sourceId": "turkiyeapi-neighborhoods",
+      "endpoint": "https://api.turkiyeapi.dev/v2/datasets/neighborhoods.json",
+      "observedAt": "2026-10-18T12:59:57.218Z",
+      "status": "ok",
+      "imported": 32279
+    },
+    {
+      "sourceId": "turkiyeapi-villages",
+      "endpoint": "https://api.turkiyeapi.dev/v2/datasets/villages.json",
+      "observedAt": "2026-10-18T12:59:57.218Z",
+      "status": "ok",
+      "imported": 18183
     }
-  ]
+  ],
+  "snapshot": {
+    "path": "data/turkiye-api/dataset.json.gz",
+    "sha256": "a71bfffb207f8d0c0b9f03f01792272895916a7e3f917b50233e7086f5e54f9a"
+  }
 }

@@ -1,43 +1,23 @@
-# Seçim Takvimi — resmî API politikası
+# Türkiye atlası ve seçim paneli
 
-Bağımsız seçim ve temsil arayüzü. `index.html` doğrudan açılabilir; çalışma zamanı için paket kurulumu gerekmez.
+Yeşil/lime atlas arayüzü, erişilebilir Türkiye haritası ve il/ilçe keşfi. index.html dosyasını açın; kurulum gerekmez.
 
-## Siyasi veri kaynakları
+## Veri kaynağı
 
-Siyasi görevler, parti bilgileri, seçim tarihleri ve sonuçları için yalnızca `data/official-api-sources.json` izin listesindeki resmî API uçları kabul edilir. HTML, PDF, haber, arama dizini ve üçüncü taraf derleme yedek kaynak olamaz. Önceki bu tür siyasi kayıtlar dağıtılan veri dosyasından kaldırıldı.
+Kullanıcının seçtiği tek veri sağlayıcı [TurkiyeAPI](https://github.com/ubeydeozdmr/turkiye-api), [belgeler](https://docs.turkiyeapi.dev/). Önceki resmî API kısıtının yerine bu sağlayıcı seçilmiştir. TurkiyeAPI bağımsızdır, devlet API'si olarak sunulmaz. Harita çizimi ayrı lisanslı görsel varlıktır.
 
-Bağlı kaynak: İzmir Büyükşehir Belediyesi meclis üyeleri API'si. API sahipliği ve kapsamı kurumun açık veri kataloğunda belgelenir:
-https://acikveri.bizizmir.com/tr/dataset/meclis-uyeleri/resource/5ec4f015-d2ff-4fc7-a91d-dda03961c26b
+Beş koleksiyonun tamamı alınır: 81 il, 973 ilçe, 1.377 belediye, 32.279 mahalle, 18.183 köy. Sayılar indirme anındaki /v2/meta ile doğrulanır. Veri seti 2025, sağlayıcının güncellemesi 2026-05-21; indirme zamanı source-manifest.json içinde ayrıca yer alır. Bunlar bugünkü nüfus veya siyasi görev bilgisi iddiası değildir.
 
-Son doğrudan API okuması 29 ilçe başkanı kaydı sağladı. İzmir il başkanı parti kaydı incelemede tutulur; yalnızca API yanıtı bulunması bağımsız güncellik doğrulaması değildir.
+Harita nüfus aralıklarını gösterir. İl kartları nüfus, alan, rakım, bölge, koordinat ve telefon kodlarını; ilçeler belediyeleri, mahalle/köy aramasını, nüfus ve posta kodlarını gösterir. Yerleşimler ilk açılışta yüklenir ve 50'şer kayıt gösterilir. Yaklaşık posta kodları açıkça etiketlenir. Tüm ham alanlar data/turkiye-api/dataset.json.gz içinde korunur.
 
-Cumhurbaşkanı, güncel milletvekilleri, sandalye dağılımı ve gelecekteki seçim tarihleri için uygun resmî API bağlantısı henüz yok. Bunlar boş bırakılır. Erişilebilir bir API bulunamadı demek, kurumun hiçbir özel veya yetkilendirmeli servisi olmadığı iddiası değildir. YSK geçmiş seçim sonuçları güncel görev ve parti bilgileri yerine geçirilmez.
+Kaynak belediye başkanı, parti, Cumhurbaşkanı, milletvekili, sandalye dağılımı veya seçim takvimi sağlamaz. Bu alanlar boş durum gösterir. Eski İzmir kaynağı ve derlemeler aktif veri paketinden kaldırılmıştır.
 
-## Yenileme
+## Yenileme ve doğrulama
 
-Node.js 20 veya üstü ile:
+Node 20+ ile `npm run refresh:data` çalıştırın. /v2/meta ve belgelenmiş /v2/datasets/{koleksiyon}.json dosyaları kullanılır. Sürümlü dosyalar güncel metadata ile farklı olabileceği için son sürüm uçları seçilmiştir. Sayı, tekil kimlik ve tüm üst kayıt ilişkileri doğrulanmadan başarılı paket değiştirilmez. Yönlendirme, HTML yanıtı, HTTP ve JSON hataları reddedilir. Arızada eski paketin tarihi güncellenmez.
 
-```
-npm run refresh:official
-```
+`npm run sync:data` yerel paketi yeniden üretir. `refresh:official` geriye uyumlu komut adıdır; artık TurkiyeAPI yenilemesini çağırır, resmî kurum anlamına gelmez. Otomatik/zamanlanmış veya tarayıcıdan canlı veri yenileme yoktur. Sunulan dosyalar son başarılı indirme kopyasıdır.
 
-Bu komut resmî API'ye doğrudan GET yapar; sabit uç nokta, yönlendirme, HTTP durumu, JSON içerik türü, şema, belediye eşleşmesi ve yinelenen görev kontrollerinden sonra veri paketini üretir. Hata durumunda HTML/derleme veya önceki politik veri setine dönülmez. Başarısız çalışmada ilgili bölüm boş ve çalışma durumu hatalı olarak kaydedilir; komut hata koduyla biter.
+`npm install` ve `npm test`: API hata durumları, beş koleksiyonun tamlığı/ilişkileri, SHA-256 ve ham veriden birebir yeniden üretim, kaynak kısıtı ve DOM etkileşimleri denetlenir. Görsel tarayıcı kontrolü yapılmadı; file:// gözlem isteği güvenlik politikasıyla engellenmişti.
 
-`data/api/izmir-meclis.json` ham API yanıtıdır. `data/politics.json` normalize edilmiş siyasi kayıtlardır. `data/source-manifest.json` API yanıt özeti ve SHA-256 değerini içerir; resmî dijital imza değildir. `javascript/politics-data.js` yerel dosyadan açılabilmesi için aynı verinin betik paketidir.
-
-Tarayıcı son alınan API yanıtının paketlenmiş kopyasını gösterir. Canlı veri akışı veya zamanlanmış otomatik yenileme yoktur. Yeni bir kurum API'si için kaynak sahipliği, belge, erişim yetkisi ve yanıt şeması doğrulanmalı; ayrıca adaptör ve testleri eklenmelidir. Sadece kaynak etiketini “resmî” yapmak kabul edilmez.
-
-## Veri sözleşmesi
-
-Şema 4, `sourcePolicy: official-api-only`. Her siyasi kayıt ve bildirim API kimliği ile izin verilen uç noktaya bağlıdır. API'nin bildirmediği seçildiği parti alanı boş kalır; bağımsız doğrulama tarihleri uydurulmaz. İncelemedeki kayıtlara kesin parti atanmaz. API verisi yokluğu sıfır vekil veya boş Meclis olarak gösterilmez. Tarih API'si bağlanmadığı için önceki tahmini tarihler ve ICS indirmeleri kaldırılmıştır.
-
-Üçüncü taraf il/ilçe sözlüğü de kaldırılmıştır. İlçe adları doğrudan resmî API unvanlarından üretilir. API ile bağlanamayan harita şekilleri yer adı yerine “Harita bölgesi” arayüz etiketi alır. `data/map-regions.json` yalnızca çizim kimliklerini içerir; bunlar resmî idari bölge kodu iddiası taşımaz. Ulusal ilçe sayısı bilinmiyor olarak tutulur; eksik kayıt sayısı sıfır diye gösterilmez. Harita çizimi ayrı lisanslı görsel varlıktır; siyasi bilgi kaynağı değildir. Kaynakları THIRD-PARTY.md içinde açıklanır.
-
-## Kontrol
-
-```
-npm install
-npm test
-```
-
-Testler resmî API izin listesini, HTML yanıtlarının reddini, bozuk JSON / HTTP hatalarını, kaynak sözleşmesini, eksik veri durumlarını ve arayüz etkileşimlerini sınar. `npm run sync:data` API kaynaklı normalize edilmiş veriyi tekrar paketler; yeni siyasi bilgi toplamaz.
+Lisanslar: THIRD-PARTY.md.
