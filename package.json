@@ -5,7 +5,7 @@
   "description": "Türkiye seçim takvimi ve temsil haritası",
   "scripts": {
     "sync:data": "node scripts/sync-data.cjs",
-    "test": "node --check javascript/timer.js && node --check javascript/politics.js && node tests/dashboard.cjs"
+    "test": "node --check javascript/timer.js && node --check javascript/politics.js && node tests/data-quality.cjs && node tests/dashboard.cjs"
   },
   "devDependencies": { "linkedom": "0.18.13" }
 }
