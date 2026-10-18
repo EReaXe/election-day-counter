@@ -1,584 +1,521 @@
 {
   "asOf": "2026-10-18",
-  "districtTotal": 973,
-  "districtRecords": 261,
-  "districtMissing": 712,
-  "officialDistricts": 210,
-  "districtPartyReported": 179,
-  "districtPartyMissing": 82,
-  "compilationDistricts": 51,
-  "officialProvinces": 6,
-  "compilationProvinces": 74,
-  "conflicts": 1,
-  "independentlyVerified": 0,
-  "electionPartyKnown": 0,
+  "provider": {
+    "id": "turkiyeapi",
+    "name": "TurkiyeAPI",
+    "isGovernment": false,
+    "repository": "https://github.com/ubeydeozdmr/turkiye-api",
+    "docs": "https://docs.turkiyeapi.dev/",
+    "base": "https://api.turkiyeapi.dev/v2",
+    "datasetVersion": "2025",
+    "lastUpdated": "2026-05-21",
+    "observedAt": "2026-10-18T12:59:57.218Z",
+    "counts": {
+      "provinces": 81,
+      "districts": 973,
+      "municipalities": 1377,
+      "neighborhoods": 32279,
+      "villages": 18183
+    }
+  },
+  "collections": {
+    "provinces": 81,
+    "districts": 973,
+    "municipalities": 1377,
+    "neighborhoods": 32279,
+    "villages": 18183
+  },
+  "politicalAvailability": {
+    "president": false,
+    "parliament": false,
+    "calendar": false
+  },
   "provinceCoverage": [
     {
       "id": 1,
       "name": "Adana",
       "districts": 15,
-      "records": 0,
-      "official": 0
+      "municipalities": 15
     },
     {
       "id": 2,
       "name": "Adıyaman",
       "districts": 9,
-      "records": 1,
-      "official": 0
+      "municipalities": 23
     },
     {
       "id": 3,
       "name": "Afyonkarahisar",
       "districts": 18,
-      "records": 1,
-      "official": 0
+      "municipalities": 60
     },
     {
       "id": 4,
       "name": "Ağrı",
       "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 5,
-      "name": "Amasya",
-      "districts": 7,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 6,
-      "name": "Ankara",
-      "districts": 25,
-      "records": 21,
-      "official": 21
-    },
-    {
-      "id": 7,
-      "name": "Antalya",
-      "districts": 19,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 8,
-      "name": "Artvin",
-      "districts": 9,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 9,
-      "name": "Aydın",
-      "districts": 17,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 10,
-      "name": "Balıkesir",
-      "districts": 20,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 11,
-      "name": "Bilecik",
-      "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 12,
-      "name": "Bingöl",
-      "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 13,
-      "name": "Bitlis",
-      "districts": 7,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 14,
-      "name": "Bolu",
-      "districts": 9,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 15,
-      "name": "Burdur",
-      "districts": 11,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 16,
-      "name": "Bursa",
-      "districts": 17,
-      "records": 17,
-      "official": 17
-    },
-    {
-      "id": 17,
-      "name": "Çanakkale",
-      "districts": 12,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 18,
-      "name": "Çankırı",
-      "districts": 12,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 19,
-      "name": "Çorum",
-      "districts": 14,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 20,
-      "name": "Denizli",
-      "districts": 19,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 21,
-      "name": "Diyarbakır",
-      "districts": 17,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 22,
-      "name": "Edirne",
-      "districts": 9,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 23,
-      "name": "Elazığ",
-      "districts": 11,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 24,
-      "name": "Erzincan",
-      "districts": 9,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 25,
-      "name": "Erzurum",
-      "districts": 20,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 26,
-      "name": "Eskişehir",
-      "districts": 14,
-      "records": 14,
-      "official": 14
-    },
-    {
-      "id": 27,
-      "name": "Gaziantep",
-      "districts": 9,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 28,
-      "name": "Giresun",
-      "districts": 16,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 29,
-      "name": "Gümüşhane",
-      "districts": 6,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 30,
-      "name": "Hakkari",
-      "districts": 5,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 31,
-      "name": "Hatay",
-      "districts": 15,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 32,
-      "name": "Isparta",
-      "districts": 13,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 33,
-      "name": "Mersin",
-      "districts": 13,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 34,
-      "name": "İstanbul",
-      "districts": 39,
-      "records": 39,
-      "official": 39
-    },
-    {
-      "id": 35,
-      "name": "İzmir",
-      "districts": 30,
-      "records": 29,
-      "official": 29
-    },
-    {
-      "id": 36,
-      "name": "Kars",
-      "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 37,
-      "name": "Kastamonu",
-      "districts": 20,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 38,
-      "name": "Kayseri",
-      "districts": 16,
-      "records": 16,
-      "official": 16
-    },
-    {
-      "id": 39,
-      "name": "Kırklareli",
-      "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 40,
-      "name": "Kırşehir",
-      "districts": 7,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 41,
-      "name": "Kocaeli",
-      "districts": 12,
-      "records": 12,
-      "official": 12
-    },
-    {
-      "id": 42,
-      "name": "Konya",
-      "districts": 31,
-      "records": 31,
-      "official": 31
-    },
-    {
-      "id": 43,
-      "name": "Kütahya",
-      "districts": 13,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 44,
-      "name": "Malatya",
-      "districts": 13,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 45,
-      "name": "Manisa",
-      "districts": 17,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 46,
-      "name": "Kahramanmaraş",
-      "districts": 11,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 47,
-      "name": "Mardin",
-      "districts": 10,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 48,
-      "name": "Muğla",
-      "districts": 13,
-      "records": 13,
-      "official": 13
-    },
-    {
-      "id": 49,
-      "name": "Muş",
-      "districts": 6,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 50,
-      "name": "Nevşehir",
-      "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 51,
-      "name": "Niğde",
-      "districts": 6,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 52,
-      "name": "Ordu",
-      "districts": 19,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 53,
-      "name": "Rize",
-      "districts": 12,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 54,
-      "name": "Sakarya",
-      "districts": 16,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 55,
-      "name": "Samsun",
-      "districts": 17,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 56,
-      "name": "Siirt",
-      "districts": 7,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 57,
-      "name": "Sinop",
-      "districts": 9,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 58,
-      "name": "Sivas",
-      "districts": 17,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 59,
-      "name": "Tekirdağ",
-      "districts": 11,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 60,
-      "name": "Tokat",
-      "districts": 12,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 61,
-      "name": "Trabzon",
-      "districts": 18,
-      "records": 18,
-      "official": 18
-    },
-    {
-      "id": 62,
-      "name": "Tunceli",
-      "districts": 8,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 63,
-      "name": "Şanlıurfa",
-      "districts": 13,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 64,
-      "name": "Uşak",
-      "districts": 6,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 65,
-      "name": "Van",
-      "districts": 13,
-      "records": 0,
-      "official": 0
-    },
-    {
-      "id": 66,
-      "name": "Yozgat",
-      "districts": 14,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 67,
-      "name": "Zonguldak",
-      "districts": 8,
-      "records": 1,
-      "official": 0
+      "municipalities": 12
     },
     {
       "id": 68,
       "name": "Aksaray",
       "districts": 8,
-      "records": 1,
-      "official": 0
+      "municipalities": 22
     },
     {
-      "id": 69,
-      "name": "Bayburt",
-      "districts": 3,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 70,
-      "name": "Karaman",
-      "districts": 6,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 71,
-      "name": "Kırıkkale",
-      "districts": 9,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 72,
-      "name": "Batman",
-      "districts": 6,
-      "records": 1,
-      "official": 0
-    },
-    {
-      "id": 73,
-      "name": "Şırnak",
+      "id": 5,
+      "name": "Amasya",
       "districts": 7,
-      "records": 1,
-      "official": 0
+      "municipalities": 8
     },
     {
-      "id": 74,
-      "name": "Bartın",
-      "districts": 4,
-      "records": 1,
-      "official": 0
+      "id": 6,
+      "name": "Ankara",
+      "districts": 25,
+      "municipalities": 25
+    },
+    {
+      "id": 7,
+      "name": "Antalya",
+      "districts": 19,
+      "municipalities": 19
     },
     {
       "id": 75,
       "name": "Ardahan",
       "districts": 6,
-      "records": 1,
-      "official": 0
+      "municipalities": 7
     },
     {
-      "id": 76,
-      "name": "Iğdır",
+      "id": 8,
+      "name": "Artvin",
+      "districts": 9,
+      "municipalities": 9
+    },
+    {
+      "id": 9,
+      "name": "Aydın",
+      "districts": 17,
+      "municipalities": 17
+    },
+    {
+      "id": 10,
+      "name": "Balıkesir",
+      "districts": 20,
+      "municipalities": 20
+    },
+    {
+      "id": 74,
+      "name": "Bartın",
       "districts": 4,
-      "records": 1,
-      "official": 0
+      "municipalities": 8
     },
     {
-      "id": 77,
-      "name": "Yalova",
+      "id": 72,
+      "name": "Batman",
       "districts": 6,
-      "records": 1,
-      "official": 0
+      "municipalities": 11
     },
     {
-      "id": 78,
-      "name": "Karabük",
-      "districts": 6,
-      "records": 1,
-      "official": 0
+      "id": 69,
+      "name": "Bayburt",
+      "districts": 3,
+      "municipalities": 5
     },
     {
-      "id": 79,
-      "name": "Kilis",
-      "districts": 4,
-      "records": 1,
-      "official": 0
+      "id": 11,
+      "name": "Bilecik",
+      "districts": 8,
+      "municipalities": 11
     },
     {
-      "id": 80,
-      "name": "Osmaniye",
+      "id": 12,
+      "name": "Bingöl",
+      "districts": 8,
+      "municipalities": 11
+    },
+    {
+      "id": 13,
+      "name": "Bitlis",
       "districts": 7,
-      "records": 1,
-      "official": 0
+      "municipalities": 13
+    },
+    {
+      "id": 14,
+      "name": "Bolu",
+      "districts": 9,
+      "municipalities": 12
+    },
+    {
+      "id": 15,
+      "name": "Burdur",
+      "districts": 11,
+      "municipalities": 15
+    },
+    {
+      "id": 16,
+      "name": "Bursa",
+      "districts": 17,
+      "municipalities": 17
+    },
+    {
+      "id": 17,
+      "name": "Çanakkale",
+      "districts": 12,
+      "municipalities": 23
+    },
+    {
+      "id": 18,
+      "name": "Çankırı",
+      "districts": 12,
+      "municipalities": 17
+    },
+    {
+      "id": 19,
+      "name": "Çorum",
+      "districts": 14,
+      "municipalities": 16
+    },
+    {
+      "id": 20,
+      "name": "Denizli",
+      "districts": 19,
+      "municipalities": 19
+    },
+    {
+      "id": 21,
+      "name": "Diyarbakır",
+      "districts": 17,
+      "municipalities": 17
     },
     {
       "id": 81,
       "name": "Düzce",
       "districts": 8,
-      "records": 1,
-      "official": 0
+      "municipalities": 10
+    },
+    {
+      "id": 22,
+      "name": "Edirne",
+      "districts": 9,
+      "municipalities": 16
+    },
+    {
+      "id": 23,
+      "name": "Elazığ",
+      "districts": 11,
+      "municipalities": 20
+    },
+    {
+      "id": 24,
+      "name": "Erzincan",
+      "districts": 9,
+      "municipalities": 16
+    },
+    {
+      "id": 25,
+      "name": "Erzurum",
+      "districts": 20,
+      "municipalities": 20
+    },
+    {
+      "id": 26,
+      "name": "Eskişehir",
+      "districts": 14,
+      "municipalities": 14
+    },
+    {
+      "id": 27,
+      "name": "Gaziantep",
+      "districts": 9,
+      "municipalities": 9
+    },
+    {
+      "id": 28,
+      "name": "Giresun",
+      "districts": 16,
+      "municipalities": 25
+    },
+    {
+      "id": 29,
+      "name": "Gümüşhane",
+      "districts": 6,
+      "municipalities": 15
+    },
+    {
+      "id": 30,
+      "name": "Hakkari",
+      "districts": 5,
+      "municipalities": 8
+    },
+    {
+      "id": 31,
+      "name": "Hatay",
+      "districts": 15,
+      "municipalities": 15
+    },
+    {
+      "id": 76,
+      "name": "Iğdır",
+      "districts": 4,
+      "municipalities": 7
+    },
+    {
+      "id": 32,
+      "name": "Isparta",
+      "districts": 13,
+      "municipalities": 22
+    },
+    {
+      "id": 34,
+      "name": "İstanbul",
+      "districts": 39,
+      "municipalities": 39
+    },
+    {
+      "id": 35,
+      "name": "İzmir",
+      "districts": 30,
+      "municipalities": 30
+    },
+    {
+      "id": 46,
+      "name": "Kahramanmaraş",
+      "districts": 11,
+      "municipalities": 11
+    },
+    {
+      "id": 78,
+      "name": "Karabük",
+      "districts": 6,
+      "municipalities": 7
+    },
+    {
+      "id": 70,
+      "name": "Karaman",
+      "districts": 6,
+      "municipalities": 11
+    },
+    {
+      "id": 36,
+      "name": "Kars",
+      "districts": 8,
+      "municipalities": 9
+    },
+    {
+      "id": 37,
+      "name": "Kastamonu",
+      "districts": 20,
+      "municipalities": 20
+    },
+    {
+      "id": 38,
+      "name": "Kayseri",
+      "districts": 16,
+      "municipalities": 16
+    },
+    {
+      "id": 79,
+      "name": "Kilis",
+      "districts": 4,
+      "municipalities": 4
+    },
+    {
+      "id": 71,
+      "name": "Kırıkkale",
+      "districts": 9,
+      "municipalities": 11
+    },
+    {
+      "id": 39,
+      "name": "Kırklareli",
+      "districts": 8,
+      "municipalities": 21
+    },
+    {
+      "id": 40,
+      "name": "Kırşehir",
+      "districts": 7,
+      "municipalities": 10
+    },
+    {
+      "id": 41,
+      "name": "Kocaeli",
+      "districts": 12,
+      "municipalities": 12
+    },
+    {
+      "id": 42,
+      "name": "Konya",
+      "districts": 31,
+      "municipalities": 31
+    },
+    {
+      "id": 43,
+      "name": "Kütahya",
+      "districts": 13,
+      "municipalities": 28
+    },
+    {
+      "id": 44,
+      "name": "Malatya",
+      "districts": 13,
+      "municipalities": 13
+    },
+    {
+      "id": 45,
+      "name": "Manisa",
+      "districts": 17,
+      "municipalities": 17
+    },
+    {
+      "id": 47,
+      "name": "Mardin",
+      "districts": 10,
+      "municipalities": 10
+    },
+    {
+      "id": 33,
+      "name": "Mersin",
+      "districts": 13,
+      "municipalities": 13
+    },
+    {
+      "id": 48,
+      "name": "Muğla",
+      "districts": 13,
+      "municipalities": 13
+    },
+    {
+      "id": 49,
+      "name": "Muş",
+      "districts": 6,
+      "municipalities": 23
+    },
+    {
+      "id": 50,
+      "name": "Nevşehir",
+      "districts": 8,
+      "municipalities": 27
+    },
+    {
+      "id": 51,
+      "name": "Niğde",
+      "districts": 6,
+      "municipalities": 29
+    },
+    {
+      "id": 52,
+      "name": "Ordu",
+      "districts": 19,
+      "municipalities": 19
+    },
+    {
+      "id": 80,
+      "name": "Osmaniye",
+      "districts": 7,
+      "municipalities": 14
+    },
+    {
+      "id": 53,
+      "name": "Rize",
+      "districts": 12,
+      "municipalities": 18
+    },
+    {
+      "id": 54,
+      "name": "Sakarya",
+      "districts": 16,
+      "municipalities": 16
+    },
+    {
+      "id": 55,
+      "name": "Samsun",
+      "districts": 17,
+      "municipalities": 17
+    },
+    {
+      "id": 63,
+      "name": "Şanlıurfa",
+      "districts": 13,
+      "municipalities": 13
+    },
+    {
+      "id": 56,
+      "name": "Siirt",
+      "districts": 7,
+      "municipalities": 12
+    },
+    {
+      "id": 57,
+      "name": "Sinop",
+      "districts": 9,
+      "municipalities": 9
+    },
+    {
+      "id": 73,
+      "name": "Şırnak",
+      "districts": 7,
+      "municipalities": 19
+    },
+    {
+      "id": 58,
+      "name": "Sivas",
+      "districts": 17,
+      "municipalities": 27
+    },
+    {
+      "id": 59,
+      "name": "Tekirdağ",
+      "districts": 11,
+      "municipalities": 11
+    },
+    {
+      "id": 60,
+      "name": "Tokat",
+      "districts": 12,
+      "municipalities": 42
+    },
+    {
+      "id": 61,
+      "name": "Trabzon",
+      "districts": 18,
+      "municipalities": 18
+    },
+    {
+      "id": 62,
+      "name": "Tunceli",
+      "districts": 8,
+      "municipalities": 9
+    },
+    {
+      "id": 64,
+      "name": "Uşak",
+      "districts": 6,
+      "municipalities": 11
+    },
+    {
+      "id": 65,
+      "name": "Van",
+      "districts": 13,
+      "municipalities": 13
+    },
+    {
+      "id": 77,
+      "name": "Yalova",
+      "districts": 6,
+      "municipalities": 14
+    },
+    {
+      "id": 66,
+      "name": "Yozgat",
+      "districts": 14,
+      "municipalities": 36
+    },
+    {
+      "id": 67,
+      "name": "Zonguldak",
+      "districts": 8,
+      "municipalities": 25
     }
   ]
 }

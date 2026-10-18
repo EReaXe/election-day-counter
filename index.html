@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Türkiye'deki seçimler için sade bir geri sayım paneli. Tahmini tarihler ve kalan süreler tek ekranda.">
+  <meta name="description" content="TurkiyeAPI verileriyle Türkiye haritası, il ve ilçe nüfusları, belediyeler, mahalleler ve köyler.">
   <meta name="color-scheme" content="light dark">
   <title>Seçim Takvimi · Türkiye</title>
   <link rel="stylesheet" href="css/style.css">
@@ -12,44 +12,51 @@
   <script src="javascript/politics-data.js" defer></script>
   <script src="javascript/data-quality.js" defer></script>
   <script src="javascript/map-data.js" defer></script>
+  <script src="javascript/administrative.js" defer></script>
   <script src="javascript/politics.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
   <div class="page">
     <header class="header">
-      <a class="brand" href="./" aria-label="Seçim Takvimi ana sayfa"><span class="brand-icon" aria-hidden="true">▥</span> seçim<span class="brand-light">takvimi</span></a>
+      <a class="brand" href="./" aria-label="Seçim Takvimi ana sayfa"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span> seçim<span class="brand-light">takvimi</span></a>
+      <nav class="main-nav" aria-label="Ana menü"><a href="#genel-bakis">Genel bakış</a><a href="#harita">Türkiye haritası</a><a href="#meclis">Meclis</a></nav>
       <button class="theme-toggle" id="theme-toggle" type="button" hidden>Temayı değiştir</button>
     </header>
-    <main>
-      <section class="intro" aria-labelledby="page-title">
-        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> TÜRKİYE · SEÇİM PANELİ</div>
-        <h1 id="page-title">Bir sonraki seçime<br>ne kadar kaldı?</h1>
-        <p>Seçim takvimini takip edin. Kalan zamanı bir bakışta görün.</p>
+    <main id="main-content">
+      <section class="intro" id="genel-bakis" aria-labelledby="page-title">
+        <div class="hero-copy"><div class="eyebrow"><span class="dot" aria-hidden="true"></span> BAĞIMSIZ SEÇİM VE TEMSİL ATLASI</div>
+          <h1 id="page-title">Türkiye’yi<br><em>birlikte keşfedin.</em></h1>
+          <p>81 il. Binlerce yerel hikâye. Nüfustan yerleşimlere,<br class="desktop-break"> Türkiye’nin bütününe tek bir yerden bakın.</p>
+          <div class="hero-actions"><a class="primary-link" href="#harita">Haritayı keşfet <span aria-hidden="true">↗</span></a><a class="quiet-link" href="#secim-takvimi">Seçim takvimine bak <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="orbit-dot orbit-dot-one"></span><span class="orbit-dot orbit-dot-two"></span><div class="atlas-stamp"><span>TÜRKİYE</span><strong>81</strong><span>İL · ORTAK GELECEK</span></div><span class="art-coordinate">39° N / 35° E</span><span class="art-caption">BÜTÜN RESME BAKIN.</span></div>
       </section>
-      <aside class="notice"><span aria-hidden="true">ⓘ</span><p><strong>Tarihler tahminidir.</strong> Sayaçlar projenin mevcut tarih varsayımlarını kullanır; resmî seçim takvimi veya oy verme saati değildir. Güncel duyurular için <a href="https://www.ysk.gov.tr/" target="_blank" rel="noopener noreferrer">YSK'yi ziyaret edin ↗</a></p></aside>
+      <div class="section-label" id="secim-takvimi"><span>01 / SEÇİM TAKVİMİ</span><span>Seçilen kaynak: TurkiyeAPI</span></div>
+      <aside class="notice"><span aria-hidden="true">ⓘ</span><p><strong>Seçilen kaynak: TurkiyeAPI.</strong> TurkiyeAPI seçim tarihi sağlamadığı için sayaçlara tahmini tarih atanmaz. <a href="https://www.ysk.gov.tr/" target="_blank" rel="noopener noreferrer">YSK duyuruları ↗</a></p></aside>
       <section class="elections" aria-label="Seçim sayaçları">
         <article class="election featured" data-election="president">
-          <div class="card-top"><span class="card-number">01 / CUMHURBAŞKANLIĞI</span><span class="badge">Tahmini tarih</span></div>
+          <div class="card-top"><span class="card-number">01 / CUMHURBAŞKANLIĞI</span><span class="badge">Veri kaynağında yok</span></div>
           <h2>Cumhurbaşkanı Seçimi</h2>
-          <p class="election-date"><time datetime="2028-05-28T08:00:00+03:00">28 Mayıs 2028 · 08.00</time><span>Türkiye saati</span></p>
+          <p class="election-date"><time>Kaynak seçim tarihi sağlamıyor</time></p>
           <div class="countdown" role="timer" aria-label="Cumhurbaşkanı seçimine kalan süre" aria-live="off">
             <div><span data-unit="days">—</span><small>GÜN</small></div><div><span data-unit="hours">—</span><small>SAAT</small></div><div><span data-unit="minutes">—</span><small>DAKİKA</small></div><div><span data-unit="seconds">—</span><small>SANİYE</small></div>
           </div>
           <div class="card-bottom"><span class="status">Hedef tarihe kalan süre</span><button class="calendar" type="button" hidden>Takvime ekle <span aria-hidden="true">↗</span></button></div>
         </article>
         <article class="election" data-election="parliament">
-          <div class="card-top"><span class="card-number">02 / MİLLETVEKİLLİĞİ</span><span class="badge">Tahmini tarih</span></div>
+          <div class="card-top"><span class="card-number">02 / MİLLETVEKİLLİĞİ</span><span class="badge">Veri kaynağında yok</span></div>
           <h2>Milletvekili Genel Seçimi</h2>
-          <p class="election-date"><time datetime="2028-05-28T08:00:00+03:00">28 Mayıs 2028 · 08.00</time><span>Türkiye saati</span></p>
+          <p class="election-date"><time>Kaynak seçim tarihi sağlamıyor</time></p>
           <div class="countdown" role="timer" aria-label="Milletvekili seçimine kalan süre" aria-live="off">
             <div><span data-unit="days">—</span><small>GÜN</small></div><div><span data-unit="hours">—</span><small>SAAT</small></div><div><span data-unit="minutes">—</span><small>DAKİKA</small></div><div><span data-unit="seconds">—</span><small>SANİYE</small></div>
           </div>
           <div class="card-bottom"><span class="status">Hedef tarihe kalan süre</span><button class="calendar" type="button" hidden>Takvime ekle <span aria-hidden="true">↗</span></button></div>
         </article>
         <article class="election" data-election="local">
-          <div class="card-top"><span class="card-number">03 / YEREL YÖNETİMLER</span><span class="badge">Tahmini tarih</span></div>
+          <div class="card-top"><span class="card-number">03 / YEREL YÖNETİMLER</span><span class="badge">Veri kaynağında yok</span></div>
           <h2>Mahalli İdareler Genel Seçimi</h2>
-          <p class="election-date"><time datetime="2029-03-31T08:00:00+03:00">31 Mart 2029 · 08.00</time><span>Türkiye saati</span></p>
+          <p class="election-date"><time>Kaynak seçim tarihi sağlamıyor</time></p>
           <div class="countdown" role="timer" aria-label="Mahalli idareler seçimine kalan süre" aria-live="off">
             <div><span data-unit="days">—</span><small>GÜN</small></div><div><span data-unit="hours">—</span><small>SAAT</small></div><div><span data-unit="minutes">—</span><small>DAKİKA</small></div><div><span data-unit="seconds">—</span><small>SANİYE</small></div>
           </div>
@@ -57,34 +64,35 @@
         </article>
       </section>
       <noscript><p class="notice">Canlı geri sayım için JavaScript'i etkinleştirin. Tahmini hedef tarihleri yukarıda görebilirsiniz.</p></noscript>
-      <section class="politics-section" aria-labelledby="politics-title">
-        <div class="section-heading"><div><div class="eyebrow">TÜRKİYE'NİN TEMSİL HARİTASI</div><h2 id="politics-title">Şehrinizde kim görevde?</h2><p>Belediyeler, milletvekilleri ve Meclis dağılımı.</p></div><span class="snapshot" id="snapshot-date">Kaynaklar yükleniyor…</span></div>
+      <section id="harita" class="politics-section" aria-labelledby="politics-title">
+        <div class="section-heading"><div><div class="eyebrow">02 / TÜRKİYE ATLASI</div><h2 id="politics-title">Türkiye’yi yakından keşfedin.</h2><p>Haritadan bir il seçin. Nüfusunu, ilçelerini ve yerleşimlerini keşfedin.</p></div><span class="snapshot" id="snapshot-date">Kaynaklar yükleniyor…</span></div>
         <div class="representation-summary" id="representation-summary"></div>
-        <p class="data-note" id="coverage-note"></p>
-        <section class="quality-center" aria-labelledby="quality-title"><div class="map-heading"><h3 id="quality-title">Veri güvenilirliği ve kapsam</h3><a class="source-link" href="data/quality-report.json" download>Veri raporunu indir ↗</a></div><div id="quality-metrics" class="quality-metrics"></div><p class="muted">Resmî kaynaktan alınmış olması, kaydın bağımsız olarak doğrulandığı veya anlık güncel olduğu anlamına gelmez. Seçildiği parti bilinmiyorsa boş bırakılır.</p><div id="quality-issues"></div></section>
         <div class="explorer">
           <section class="map-panel" aria-labelledby="map-title">
-            <div class="map-heading"><h3 id="map-title">Türkiye haritası</h3><label class="select-label">Görünüm<select id="map-mode"><option value="municipality">Belediye yönetimi</option><option value="parliament">Milletvekili dağılımı</option></select></label></div>
+            <div class="map-heading"><h3 id="map-title"><span class="map-live-dot" aria-hidden="true"></span> Türkiye / İl görünümü</h3><label class="select-label">Görünüm<select id="map-mode"><option value="population">Nüfus dağılımı</option><option value="municipality" disabled>Belediye partileri · Veri yok</option><option value="parliament" disabled>Milletvekilleri · Veri yok</option></select></label></div>
             <p id="map-explanation" class="muted"></p>
-            <div class="map-tools"><label class="city-search">İl seçin<select id="province-select" aria-label="İl seçin"></select></label><label class="party-filter">Parti filtresi<select id="party-filter" aria-label="Harita parti filtresi"><option value="">Tüm partiler</option></select></label></div>
-            <label class="compilation-toggle"><input id="include-compilations" type="checkbox"> Resmî teyit bekleyen derlemeleri de renklendir</label>
+            <div class="map-tools"><label class="city-search">İl seçin<select id="province-select" aria-label="İl seçin"></select></label><label class="party-filter">Görünüm filtresi<select id="party-filter" aria-label="Harita nüfus filtresi"><option value="">Tüm aralıklar</option></select></label></div>
+            <label class="compilation-toggle" hidden><input id="include-compilations" type="checkbox"> Resmî teyit bekleyen derlemeleri de renklendir</label>
             <div id="turkey-map" class="turkey-map"></div>
             <p id="map-hover" class="map-hover" aria-live="polite">Haritadan bir il seçin.</p>
             <div id="map-legend" class="map-legend" aria-label="Harita renkleri"></div>
             <p class="map-attribution">Harita: <a href="https://github.com/dnomak/svg-turkiye-haritasi" target="_blank" rel="noopener noreferrer">Doğukan Güven Nomak / MIT</a> · <a href="THIRD-PARTY.md">Kaynaklar ve lisanslar</a></p>
           </section>
           <section class="province-panel" aria-labelledby="province-title">
-            <div class="province-heading"><span id="province-code" class="plate"></span><div><span class="eyebrow" id="province-kind"></span><h3 id="province-title"></h3></div></div>
+            <div class="detail-caption">SEÇİLİ İL <span aria-hidden="true">↘</span></div><div class="province-heading"><span id="province-code" class="plate"></span><div><span class="eyebrow" id="province-kind"></span><h3 id="province-title"></h3></div></div>
             <div id="province-mayor" class="mayor-card"></div>
             <div class="detail-tabs" role="tablist" aria-label="İl detayları"><button id="tab-districts" type="button" role="tab" aria-selected="true" aria-controls="district-panel" tabindex="0">İlçeler <span id="district-count"></span></button><button id="tab-mps" type="button" role="tab" aria-selected="false" aria-controls="mp-panel" tabindex="-1">Milletvekilleri <span id="mp-count"></span></button></div>
             <section id="district-panel" role="tabpanel" aria-labelledby="tab-districts"><label class="district-search">İlçe ara<input id="district-search" type="search" placeholder="İlçe adı yazın…" autocomplete="off"></label><p id="district-coverage" class="muted"></p><div id="district-list" class="detail-list"></div></section>
-            <section id="mp-panel" role="tabpanel" aria-labelledby="tab-mps" hidden><div id="province-seat-summary" class="province-seat-summary"></div><div id="mp-list" class="detail-list"></div><p class="source-line"><a href="https://www.tbmm.gov.tr/milletvekili/AllList" target="_blank" rel="noopener noreferrer">Kaynak: TBMM milletvekili listesi ↗</a></p></section>
+            <section id="mp-panel" role="tabpanel" aria-labelledby="tab-mps" hidden><div id="province-seat-summary" class="province-seat-summary"></div><div id="mp-list" class="detail-list"></div><p class="source-line"><a href="https://www.tbmm.gov.tr/milletvekili/AllList" target="_blank" rel="noopener noreferrer">TBMM kurum sitesi (API kaynağı değil) ↗</a></p></section>
           </section>
         </div>
-        <section class="parliament-panel" aria-labelledby="parliament-title"><div class="map-heading"><div><div class="eyebrow">TÜRKİYE BÜYÜK MİLLET MECLİSİ</div><h3 id="parliament-title">Mecliste sandalye dağılımı</h3></div><a class="source-link" href="https://www.tbmm.gov.tr/SandalyeDagilimi" target="_blank" rel="noopener noreferrer">TBMM kaynağı ↗</a></div><div class="parliament-body"><div class="hemicycle"><div id="seat-chart"></div><div class="seat-total"><strong id="seat-total"></strong><span>görevdeki milletvekili</span></div></div><div id="seat-table"></div></div><p class="muted">600 kişilik kapasite üzerinden gösterilir. Boş sandalyeler gri renktedir. Parti bilgileri seçimde kullanılan listeyi değil, TBMM kaydındaki üyeliği gösterir.</p></section>
-        <details class="data-sources"><summary>Veriler nereden geliyor, ne kadar güncel?</summary><div><p>Bu panel kaynakların okunduğu tarihteki bir görüntüdür; canlı veri akışı değildir. Kaynak okuma tarihi, her görev ve parti değişikliğinin o gün ayrıca doğrulandığı anlamına gelmez.</p><ul><li>Milletvekilleri ve sandalye dağılımı: <a href="https://www.tbmm.gov.tr/milletvekili/AllList" target="_blank" rel="noopener noreferrer">TBMM</a>.</li><li>Cumhurbaşkanı: <a href="https://www.tccb.gov.tr/receptayyiperdogan/biyografi/" target="_blank" rel="noopener noreferrer">Cumhurbaşkanlığı biyografisi</a>.</li><li>İstanbul, Ankara, Bursa, Kocaeli, Muğla, Eskişehir, Kayseri, Trabzon, Konya, Mersin ve İzmir: resmî meclis listeleri / açık veri. Resmî listelerde de eksik veya çelişkili bilgiler olabilir.</li><li>Resmî kaynağa taşınmayan il başkanları: Vikipedi derlemesi; teyit bekleyen kayıtlar varsayılan haritada parti rengi almaz. Atamayla görev yapanlar bir partiye otomatik olarak bağlanmaz.</li><li>İlçeler: TurkiyeAPI; belediye bağlantıları: Türkiye Belediyeler Birliği. Başkan bilgisi alınamayan ilçelerde isim ve parti uydurulmaz.</li></ul><p>Farklı kaynaklar farklı bilgiler verebilir. Resmî kayıtlar arasındaki veya erişilemeyen kaynakların bildirimlerindeki çelişkiler çözülmeden kesin parti gösterilmez. Ayrıntılar ve lisanslar: <a href="THIRD-PARTY.md">THIRD-PARTY.md</a>.</p></div></details>
+        <section id="meclis" class="parliament-panel" aria-labelledby="parliament-title"><div class="map-heading"><div><div class="eyebrow">03 / TÜRKİYE BÜYÜK MİLLET MECLİSİ</div><h3 id="parliament-title">Mecliste sandalye dağılımı</h3></div><a class="source-link" href="https://www.tbmm.gov.tr/SandalyeDagilimi" target="_blank" rel="noopener noreferrer">TBMM kurum sitesi ↗</a></div><div class="parliament-body"><div class="hemicycle"><div id="seat-chart"></div><div class="seat-total"><strong id="seat-total"></strong><span>görevdeki milletvekili</span></div></div><div id="seat-table"></div></div><p class="muted">TurkiyeAPI milletvekili ve sandalye dağılımı sağlamıyor. Eksik veri sıfır sandalye anlamına gelmez.</p></section>
+        <details class="coverage-disclosure"><summary><span>Şeffaflık, tasarımın bir parçası.</span><span>Veri kapsamı ve kaynak notları <b aria-hidden="true">＋</b></span></summary><div class="coverage-content">        <p class="data-note" id="coverage-note"></p>
+        <section class="quality-center" aria-labelledby="quality-title"><div class="map-heading"><h3 id="quality-title">Veri güvenilirliği ve kapsam</h3><a class="source-link" href="data/quality-report.json" download>Veri raporunu indir ↗</a></div><div id="quality-metrics" class="quality-metrics"></div><p class="muted">TurkiyeAPI bağımsız bir projedir. Veri yılı, kaynak güncelleme tarihi ve indirme zamanı farklıdır. Siyasi görev bilgileri bu serviste bulunmaz.</p><div id="quality-issues"></div></section>
+</div></details>
+        <details class="data-sources"><summary>TurkiyeAPI kaynağı ve kapsamı</summary><div><p>İl, ilçe, belediye, mahalle ve köy verileri seçtiğiniz <a href="https://github.com/ubeydeozdmr/turkiye-api" target="_blank" rel="noopener noreferrer">TurkiyeAPI projesinden</a> alınır. Proje bir devlet kurumu tarafından işletilmez.</p><p>Tüm beş koleksiyon indirilir. İl detaylarında nüfus, alan, rakım, bölge ve koordinat; ilçe detaylarında belediyeler, mahalleler, köyler ve posta kodları bulunur. Belediye başkanları, partiler, milletvekilleri, Cumhurbaşkanı ve seçim sonuçları bu kaynakta yoktur.</p><p><a href="data/turkiye-api/dataset.json.gz" download>Tüm veri setini indir (JSON.GZ)</a> · <a href="https://docs.turkiyeapi.dev/" target="_blank" rel="noopener noreferrer">API belgeleri</a> · <a href="THIRD-PARTY.md">Lisanslar</a>. Sayfa son alınan API yanıtının kopyasını gösterir; canlı yayın değildir.</p></div></details>
       </section>
-      <section class="info" aria-label="Panel hakkında"><div><h3>Takvimden temsile.</h3><p>Bağımsız ve açık kaynaklı bir seçim paneli.</p></div><button id="share" class="share" type="button" hidden>Paneli paylaş ↗</button><p id="feedback" role="status"></p></section>
+      <section class="info" aria-label="Panel hakkında"><div><h3>Büyük resmi birlikte okuyalım.</h3><p>Bağımsız. Açık kaynaklı. Herkes için erişilebilir.</p></div><button id="share" class="share" type="button" hidden>Paneli paylaş ↗</button><p id="feedback" role="status"></p></section>
     </main>
     <footer><span>Seçim Takvimi <span aria-hidden="true">·</span> Resmî bir kurumla bağlantılı değildir.</span><a href="https://github.com/EReaXe/election-day-counter" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
   </div>

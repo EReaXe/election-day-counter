@@ -1,5 +1,5 @@
-/* Hedefler tarihsel proje varsayımlarıdır; resmî seçim takvimi değildir.
-   Tarih ve saat bilgisi index.html içindeki <time> öğelerinden okunur. */
+/* Tarihler resmî API ile bağlanana kadar <time> öğelerinde datetime yoktur.
+   Tahmini veya önceki proje tarihleri yedek olarak kullanılmaz. */
 'use strict';
 
 function getRemaining(target, now = Date.now()) {
@@ -27,7 +27,8 @@ function calendarEvent(title, target) {
 
 if (typeof document !== 'undefined') {
   const cards = Array.from(document.querySelectorAll('[data-election]')).map(card => {
-    const target = Date.parse(card.querySelector('time').dateTime);
+    const calendarEnabled = window.POLITICS_DATA?.availability?.calendar === true;
+    const target = calendarEnabled ? Date.parse(card.querySelector('time').dateTime) : NaN;
     const title = card.querySelector('h2').textContent;
     const calendar = card.querySelector('.calendar');
     if (Number.isFinite(target)) {
@@ -50,7 +51,7 @@ if (typeof document !== 'undefined') {
     const now = Date.now();
     cards.forEach(({card, target, units, status}) => {
       if (!Number.isFinite(target)) {
-        status.textContent = 'Tarih bilgisi güncellenmeli';
+        status.textContent = 'Resmî takvim API’si bekleniyor';
         return;
       }
       const remaining = getRemaining(target, now);

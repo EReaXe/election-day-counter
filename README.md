@@ -1,65 +1,23 @@
-# Seçim Takvimi
+# Türkiye atlası ve seçim paneli
 
-Türkiye'deki seçimler için mobil uyumlu, bağımsız ve açık kaynaklı geri sayım paneli. HTML, CSS ve JavaScript kullanır; derleme veya paket kurulumu gerektirmez.
+Yeşil/lime atlas arayüzü, erişilebilir Türkiye haritası ve il/ilçe keşfi. index.html dosyasını açın; kurulum gerekmez.
 
-## Çalıştırma
+## Veri kaynağı
 
-`index.html` dosyasını tarayıcıda açın veya klasörü herhangi bir statik web sunucusunda yayınlayın. Bağlantı paylaşımı HTTP/HTTPS üzerinden çalışır. Google Fonts erişilemezse sistem yazı tipleri kullanılır.
+Kullanıcının seçtiği tek veri sağlayıcı [TurkiyeAPI](https://github.com/ubeydeozdmr/turkiye-api), [belgeler](https://docs.turkiyeapi.dev/). Önceki resmî API kısıtının yerine bu sağlayıcı seçilmiştir. TurkiyeAPI bağımsızdır, devlet API'si olarak sunulmaz. Harita çizimi ayrı lisanslı görsel varlıktır.
 
-## Özellikler
+Beş koleksiyonun tamamı alınır: 81 il, 973 ilçe, 1.377 belediye, 32.279 mahalle, 18.183 köy. Sayılar indirme anındaki /v2/meta ile doğrulanır. Veri seti 2025, sağlayıcının güncellemesi 2026-05-21; indirme zamanı source-manifest.json içinde ayrıca yer alır. Bunlar bugünkü nüfus veya siyasi görev bilgisi iddiası değildir.
 
-- Telefon, tablet ve masaüstüne uyumlu üç seçim kartı
-- Türkiye saatine sabit hedef tarihler (`+03:00`)
-- Sistem temasını izleyen, kullanıcı seçimini hatırlayan açık/koyu tema
-- Tahmini tarih uyarısı ve YSK bağlantısı
-- Tam günlük, “Tahmini” başlıklı ICS takvim hatırlatmaları
-- Bağlantı paylaşımı ve pano desteği
-- Tarih geçince sıfırlanan sayaç ve güncelleme mesajı
-- Arka planda durdurulan, sekmeye dönünce yenilenen sayaç
+Harita nüfus aralıklarını gösterir. İl kartları nüfus, alan, rakım, bölge, koordinat ve telefon kodlarını; ilçeler belediyeleri, mahalle/köy aramasını, nüfus ve posta kodlarını gösterir. Yerleşimler ilk açılışta yüklenir ve 50'şer kayıt gösterilir. Yaklaşık posta kodları açıkça etiketlenir. Tüm ham alanlar data/turkiye-api/dataset.json.gz içinde korunur.
 
-## Tarihleri güncelleme
+Kaynak belediye başkanı, parti, Cumhurbaşkanı, milletvekili, sandalye dağılımı veya seçim takvimi sağlamaz. Bu alanlar boş durum gösterir. Eski İzmir kaynağı ve derlemeler aktif veri paketinden kaldırılmıştır.
 
-`index.html` içindeki her kartın `<time datetime="...">` değerini ve görünen tarih metnini birlikte düzenleyin. JavaScript hedefleri bu öğelerden okur. Mevcut tarihler önceki projenin varsayımlarından alınmıştır; doğrulanmış resmî seçim tarihleri veya oy verme saatleri değildir. Resmî takvim yayımlandığında tarihleri, rozetleri ve uyarı metinlerini kaynaklarıyla birlikte güncelleyin.
+## Yenileme ve doğrulama
 
-## Kontrol
+Node 20+ ile `npm run refresh:data` çalıştırın. /v2/meta ve belgelenmiş /v2/datasets/{koleksiyon}.json dosyaları kullanılır. Sürümlü dosyalar güncel metadata ile farklı olabileceği için son sürüm uçları seçilmiştir. Sayı, tekil kimlik ve tüm üst kayıt ilişkileri doğrulanmadan başarılı paket değiştirilmez. Yönlendirme, HTML yanıtı, HTTP ve JSON hataları reddedilir. Arızada eski paketin tarihi güncellenmez.
 
-Node.js ile `node --check javascript/timer.js` komutu JavaScript sözdizimini kontrol eder. Sayaç ve takvim işlevleri Node.js altında `require('./javascript/timer.js')` ile ayrıca sınanabilir.
+`npm run sync:data` yerel paketi yeniden üretir. `refresh:official` geriye uyumlu komut adıdır; artık TurkiyeAPI yenilemesini çağırır, resmî kurum anlamına gelmez. Otomatik/zamanlanmış veya tarayıcıdan canlı veri yenileme yoktur. Sunulan dosyalar son başarılı indirme kopyasıdır.
 
-Bu proje herhangi bir resmî kurumla bağlantılı değildir.
+`npm install` ve `npm test`: API hata durumları, beş koleksiyonun tamlığı/ilişkileri, SHA-256 ve ham veriden birebir yeniden üretim, kaynak kısıtı ve DOM etkileşimleri denetlenir. Görsel tarayıcı kontrolü yapılmadı; file:// gözlem isteği güvenlik politikasıyla engellenmişti.
 
-## Temsil haritası
-
-- Tıklanabilir 81 il; klavye ile Enter / Boşluk ve alternatif il seçimi
-- Belediye yönetimi / mevcut milletvekili dağılımı harita görünümleri, parti filtresi
-- İl bazında belediye başkanı, parti kaydı, ilçe araması ve milletvekili profilleri
-- TBMM kaynaklarından 592 milletvekili; parti toplamları listeyle birebir kontrol edilmiştir
-- 600 sandalye noktası, boş koltuklar ve tüm partilerin sayısal tablosu
-- Cumhurbaşkanı ve parti bilgisi
-- İl bağlantıları `#il=34` biçiminde paylaşılabilir
-
-Veri kapsamı **tam doğrulanmış güncel belediye rehberi değildir**. 973 ilçenin 261'inde başkan kaydı vardır: 210 kayıt resmî listelerden, 51 Merkez ilçe kaydı teyit bekleyen derlemedendir. 712 ilçe kaydı eksiktir. İl belediyelerinde 6 resmî kaynaklı kayıt, 74 derleme kaydı ve 1 çözülemeyen parti çelişkisi vardır. Resmî kaynaklı olmak bağımsız doğrulama anlamına gelmez. Hiçbir belediye kaydına bağımsız doğrulama yapılmış gibi tarih atanmaz; otomatik güncelleme yoktur.
-
-`data/politics.json` makinece okunabilir veri kaydıdır. `javascript/politics-data.js` aynı verinin `file://` üzerinden de çalışması için betik sürümüdür. Veri güncellenirken ikisini birlikte üretin. `data/turkey.svg` ve `javascript/map-data.js` de aynı haritanın iki paketidir. Veri ve harita lisansları için `THIRD-PARTY.md` dosyasına bakın.
-
-Geliştirici kontrolleri: `npm install` ardından `npm test`. Bu kurulum yalnızca DOM testleri içindir; siteyi çalıştırmak için gerekmez. JSON / SVG kaynakları düzenlendikten sonra `npm run sync:data` betik paketlerini yeniden üretir ve veri tutarlılığını kontrol eder. DOM testleri görsel tarayıcı testinin yerine geçmez.
-
-
-## Veri güvenilirliği sözleşmesi (şema 3)
-
-- `officeHolder`: kaynağın bildirdiği görevi yürüten kişi ve unvan; seçilmiş başkanla aynı olduğu varsayılmaz.
-- `electedParty`: seçim kaynağıyla ayrıca belgelenmedikçe `null`.
-- `currentParty`: yalnızca çelişkisiz resmî kaynağın bildirimi; derleme veya çelişkili kayıtta `null`.
-- `claims`: her bildirimin kişi, parti, kaynak URL, kaynak türü ve okuma tarihi. Arama dizini kaydı doğrudan sayfa okumasından ayrılır.
-- `retrievedAt`: kaynağın okunduğu tarih. `lastVerifiedAt`: bağımsız doğrulama yapılmadığı sürece `null`.
-- `verification`: `primary` (resmî bildirim), `secondary` (derleme) veya `conflict` (çözülemeyen çelişki). `primary`, bağımsız doğrulama iddiası değildir.
-
-Varsayılan belediye haritası teyit bekleyen derlemeleri renklendirmez. Kullanıcı bunları isteğe bağlı açabilir; çelişkiler her iki durumda da nötrdür. 30 günden eski kaynak okuması detaylarda yeniden kontrol uyarısı alır.
-
-`data/quality-report.json` il bazında veri kapsamını sunar; `data/source-manifest.json` bu tur okunan resmî HTML dosyalarının SHA-256 parmak izlerini içerir. Parmak izleri resmî dijital imza değildir. `scripts/validate-data.cjs` bozuk tarih, tekrar eden kimlik, seçim kaynağı olmayan seçildiği parti, çelişkiye atanmış kesin parti ve tutarsız sandalye toplamını reddeder. `npm run sync:data` doğrulama geçmeden paket üretmez. `npm test` hem veri sözleşmesini hem DOM etkileşimlerini sınar.
-
-
-## Kapsam genişletmesi
-
-Kayseri (16), Trabzon (18) ve Konya (31) resmî meclis listelerinden 65 ilçe başkanı kaydı daha eklendi. Konya kaynağı parti bildirmediği için 31 ilçenin güncel parti alanı `null` bırakıldı. Resmî kaynaklı 210 ilçe kaydının 179'unda parti bildirimi vardır; başkan isminin bulunması parti bilgisinin doğrulandığı anlamına gelmez.
-
-Mersin'in 13 Ekim 2026 tarihli resmî başkan vekili seçimi haberi, meclis listesinin eski görev bilgisinden ayrıldı. Görevi yürüten kişi Gülşah Yıldırım Genç / başkan vekili olarak kaydedildi. Eski liste bildirimi `superseded` etiketiyle korundu; geçmiş bildirimler güncel görev gibi gösterilmez.
+Lisanslar: THIRD-PARTY.md.
