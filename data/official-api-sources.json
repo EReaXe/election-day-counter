@@ -1,0 +1,17 @@
+{
+  "policy": "official-api-only",
+  "scope": "Siyasi görevler, parti bilgileri, seçim tarihleri ve sonuçları",
+  "sources": [{
+    "id": "izmir-council",
+    "publisher": "İzmir Büyükşehir Belediyesi",
+    "endpoint": "https://acikveriwapi.izmir.bel.tr/IzBel/MeclisUyeleriniGetir",
+    "catalog": "https://acikveri.bizizmir.com/tr/dataset/meclis-uyeleri/resource/5ec4f015-d2ff-4fc7-a91d-dda03961c26b",
+    "format": "JSON",
+    "quarantine": ["province:35"]
+  }],
+  "unavailable": {
+    "president": "Cumhurbaşkanı ve parti bilgisi için erişilebilir resmî API doğrulanamadı.",
+    "parliament": "Güncel milletvekilleri ve sandalye dağılımı için erişilebilir resmî API doğrulanamadı.",
+    "calendar": "Gelecekteki seçim tarihleri için resmî API bağlantısı kurulamadı."
+  }
+}

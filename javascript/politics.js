@@ -30,36 +30,40 @@
   const date = new Intl.DateTimeFormat('tr-TR', {day:'numeric', month:'long', year:'numeric', timeZone:'Europe/Istanbul'}).format(new Date(data.asOf + 'T12:00:00+03:00'));
   $('#snapshot-date').textContent = 'Kaynak okuma · ' + date;
   const quality = window.DATA_QUALITY.summarize(data);
-  $('#coverage-note').textContent = `81 il ve ${quality.districtTotal} ilçe listelenir. ${quality.districtRecords} ilçede başkan kaydı var; ${quality.districtMissing} ilçede kayıt eksik. ${quality.officialDistricts} ilçe kaydı resmî listelerden geliyor; bunların ${quality.districtPartyReported} tanesinde parti bildirimi de var. ${quality.compilationDistricts} kayıt teyit bekleyen derlemelerden geliyor. Canlı veri yayını değildir.`;
-  for (const [number,label] of [[quality.officialDistricts,'Resmî kaynaklı ilçe'],[quality.districtMissing,'Eksik ilçe kaydı'],[quality.conflicts,'Çözülemeyen çelişki'],[quality.independentlyVerified,'Bağımsız doğrulama']]) {
-    const metric=el('div','quality-metric'); metric.append(el('strong','',number),el('span','',label)); $('#quality-metrics').append(metric);
+  $('#coverage-note').textContent = `Siyasi kayıtlar yalnızca izin verilen resmî API’lerden alınır. ${quality.districtRecords} ilçe kaydı API’den geliyor. API bağlantısı kurulamayan görevler ve seçim tarihleri boş bırakılır; HTML veya derlemeye geri dönülmez. Gösterilenler son API yanıtının kopyasıdır, canlı yayın değildir.`;
+  for (const [number,label] of [[quality.officialDistricts,'Resmî API / ilçe'],[quality.districtMissing,'API kaydı olmayan ilçe'],[quality.conflicts,'İncelemede'],[quality.independentlyVerified,'Bağımsız doğrulama']]) {
+    const metric=el('div','quality-metric'); metric.append(el('strong','',number??'—'),el('span','',label)); $('#quality-metrics').append(metric);
   }
-  const conflictEntities=data.provinces.filter(p=>p.mayor.verification==='conflict');
+  const conflictEntities=data.provinces.filter(p=>p.mayor?.verification==='review-required');
   for(const province of conflictEntities) {
-    const issue=el('div','quality-issue'); issue.append(el('strong','',province.name+' · Parti bilgisi çelişkili'),el('p','',province.mayor.conflictNote));
+    const issue=el('div','quality-issue'); issue.append(el('strong','',province.name+' · API kaydı incelemede'),el('p','',province.mayor.fieldNotes.currentParty));
     for(const claim of province.mayor.claims) { const line=el('p','');line.append(link(claim.sourceLabel+' ↗',claim.source),document.createTextNode(' · '+(claim.party || 'Belirtilmedi')));issue.append(line); }
     $('#quality-issues').append(issue);
   }
 
   const president = el('article', 'summary-card');
   const profile = el('div');
-  profile.append(el('span', 'eyebrow', 'CUMHURBAŞKANI'), el('h3', '', data.president.name), pill(data.president.party), el('br'), link('Cumhurbaşkanlığı kaynağı ↗', data.president.source));
-  president.append(el('div', 'summary-monogram', 'RTE'), profile);
+  profile.append(el('span', 'eyebrow', 'CUMHURBAŞKANI'), el('h3', '', data.president?.name || 'API bağlantısı bekleniyor'));
+  if(data.president)profile.append(pill(data.president.party),el('br'),link('Resmî API ↗',data.president.source));
+  else profile.append(el('p','',data.unavailable.president));
+  president.append(el('div', 'summary-monogram', '—'), profile);
   $('#representation-summary').append(president);
   const occupied = data.seats.reduce((sum, s) => sum + s.count, 0);
-  for (const [value, title, detail] of [[occupied, 'Milletvekili', `${data.capacity - occupied} boş sandalye · ${data.capacity} kapasite`], [81, 'İl, tek harita', `${data.districts.length} ilçe · kaynaklı kayıtlar`]]) {
+  for (const [value, title, detail] of [[data.availability.parliament?occupied:'—', 'Milletvekili', data.availability.parliament?`${data.capacity - occupied} boş sandalye · ${data.capacity} kapasite`:'Resmî API bağlantısı bekleniyor'], [81, 'İl, tek harita', 'Siyasi veriler · Yalnızca resmî API']]) {
     const card = el('article', 'summary-card'); const content = el('div');
     content.append(el('div', 'big-number', value), el('h3', '', title), el('p', '', detail)); card.append(content); $('#representation-summary').append(card);
   }
 
   let selected = Number(new URLSearchParams(location.hash.slice(1)).get('il')) || 34;
   if (!data.provinces.some(p => p.id === selected)) selected = 34;
-  let mode = 'parliament';
+  let mode = 'municipality';
   let filter = '';
   let includeCompilations = false;
   const mpGroups = new Map(data.provinces.map(p => [p.id, data.mps.filter(m => m.provinceId === p.id)]));
   function provinceParty(province) {
     if (mode === 'municipality') {
+      if(!province.mayor)return 'API verisi yok';
+      if(province.mayor.verification==='review-required')return 'İncelemede';
       if (province.mayor.verification === 'conflict') return 'Kaynaklar çelişiyor';
       if (province.mayor.verification !== 'primary' && !includeCompilations) return 'Resmî teyit bekleniyor';
       if (/kayy[ıu]m|atanm/i.test(province.mayor.role)) return 'Atanmış yönetim';
@@ -98,12 +102,12 @@
       parties.forEach(p => { const option = el('option', '', p); option.value = p; $('#party-filter').append(option); });
     }
     $('#map-explanation').textContent = mode === 'municipality'
-      ? 'Varsayılan görünüm yalnızca resmî listelerdeki parti bildirimlerini renklendirir. Çelişkili ve teyit bekleyen kayıtlar nötrdür. Büyükşehir olmayan illerde il merkezini temsil eder.'
-      : 'Renkler ilin mevcut milletvekilleri arasında en çok sandalyeye sahip partiyi gösterir; oy oranı veya belediye yönetimi değildir. Eşitlikler ayrı renktedir.';
+      ? 'Yalnızca resmî API’nin parti bildirimleri renklendirilir. API verisi olmayan veya incelemedeki iller nötrdür. Harita çizimi siyasi veri kaynağı değildir.'
+      : data.availability.parliament?'Renkler mevcut milletvekilleri arasında en çok sandalyeye sahip partiyi gösterir.':'Milletvekili dağılımı için resmî API bağlantısı kurulamadı. İller parti rengiyle gösterilmez.';
     shapes.forEach(shape => {
       const province = data.provinces.find(p => p.id === Number(shape.dataset.plakakodu));
       const party = provinceParty(province);
-      const qualifier = mode === 'municipality' && province.mayor.verification === 'secondary' ? ' · Derleme, resmî teyit bekliyor' : '';
+      const qualifier = '';
       shape.style.setProperty('--party-color', color(party));
       shape.classList.toggle('is-muted', Boolean(filter && party !== filter));
       shape.classList.toggle('is-selected', province.id === selected);
@@ -148,7 +152,7 @@
     const query = $('#district-search').value.trim().toLocaleLowerCase('tr-TR');
     const districts = data.districts.filter(d => d.provinceId === selected).sort((a,b) => a.name.localeCompare(b.name, 'tr'));
     const known = districts.filter(d => d.mayor).length;
-    $('#district-coverage').textContent = `${districts.length} ilçe · ${known} başkan kaydı · ${districts.length - known} doğrulama bekleyen`;
+    $('#district-coverage').textContent = districts.length?`${districts.length} ilçe kaydı · Resmî API kapsamı`:'Bu bölgenin ilçe listesi için resmî API verisi yok.';
     const rows = districts.filter(d => d.name.toLocaleLowerCase('tr-TR').includes(query)).map(d => {
       const row = el('article', 'person-row'); const title = el('h4', 'row-title', d.name);
       if (d.website) title.append(link('Belediye ↗', d.website)); row.append(title);
@@ -156,7 +160,7 @@
       else row.append(el('p', 'unknown', 'Güncel başkan ve parti bilgisi henüz doğrulanmadı.'));
       return row;
     });
-    $('#district-list').replaceChildren(...(rows.length ? rows : [el('p','muted','Bu aramayla eşleşen ilçe bulunamadı.')]));
+    $('#district-list').replaceChildren(...(rows.length ? rows : [el('p','muted',districts.length?'Bu aramayla eşleşen ilçe bulunamadı.':'İlçe bilgileri resmî API bağlantısı kurulana kadar gösterilmez.')]));
   }
   function selectProvince(id, updateHash = true) {
     const province = data.provinces.find(p => p.id === id);
@@ -164,8 +168,10 @@
     selected = id; $('#province-select').value = id;
     $('#province-code').textContent = String(id).padStart(2,'0');
     $('#province-title').textContent = province.name;
-    $('#province-kind').textContent = province.metropolitan ? 'BÜYÜKŞEHİR' : 'İL BELEDİYESİ';
-    $('#province-mayor').replaceChildren(); personRecord(province.mayor, $('#province-mayor'), true);
+    $('#province-kind').textContent = province.metropolitan ? 'BÜYÜKŞEHİR' : province.metropolitan===false?'İL BELEDİYESİ':'API BAĞLANTISI BEKLENİYOR';
+    $('#province-mayor').replaceChildren();
+    if(province.mayor)personRecord(province.mayor,$('#province-mayor'),true);
+    else $('#province-mayor').append(el('p','unknown','Bu il için resmî API’den alınmış başkan kaydı yok.'));
     if (province.website) {
       const source = el('p', 'source-line'); source.append(link('Resmî belediye sitesi ↗', province.website)); $('#province-mayor').append(source);
     }
@@ -176,8 +182,9 @@
       const row = el('article','person-row'); const name = el('p','row-name'); name.append(link(m.name + ' ↗',m.url));
       row.append(name,pill(m.party)); return row;
     }));
-    $('#mp-count').textContent = mps.length;
-    $('#district-count').textContent = data.districts.filter(d => d.provinceId === id).length;
+    if(!data.availability.parliament)$('#mp-list').append(el('p','unknown',data.unavailable.parliament));
+    $('#mp-count').textContent = data.availability.parliament?mps.length:'—';
+    $('#district-count').textContent = data.districts.filter(d => d.provinceId === id).length || '—';
     $('#district-search').value = ''; renderDistricts(); renderMap();
     if (updateHash) {
       try { history.replaceState(null, '', '#il=' + id); } catch { /* Yerel dosya güvenlik kısıtı arayüzü etkilemez. */ }
@@ -206,6 +213,7 @@
   });
 
   // 600 gerçek sandalye noktası; her renk parti sayısı kadar nokta alır.
+  if(data.availability.parliament) {
   const svgNS = 'http://www.w3.org/2000/svg';
   const chart = document.createElementNS(svgNS,'svg'); chart.setAttribute('viewBox','0 0 500 285'); chart.setAttribute('role','img');
   chart.setAttribute('aria-label', data.seats.map(s => `${s.party} ${s.count}`).join(', ') + `, boş ${data.capacity - occupied}`);
@@ -237,5 +245,11 @@
     name.append(bar); row.append(name,count); body.append(row);
   }
   table.append(body); const foot = el('tfoot'); const total = el('tr'); total.append(el('td','','Toplam kapasite'),el('td','',data.capacity)); foot.append(total); table.append(foot); $('#seat-table').append(table);
+  } else {
+    $('#seat-chart').append(el('p','api-empty',data.unavailable.parliament));
+    $('#seat-total').textContent='—';
+    document.querySelector('.hemicycle').classList.add('api-unavailable');
+    $('#seat-table').append(el('p','unknown','API verisi yok. Bu durum sıfır milletvekili veya boş Meclis anlamına gelmez.'));
+  }
   renderMap(true); selectProvince(selected, false);
 })();

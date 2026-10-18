@@ -1,0 +1,410 @@
+{
+  "purpose": "Harita çiziminin arayüz kimlikleri; resmî coğrafi veri iddiası taşımaz.",
+  "regions": [
+    {
+      "id": 1,
+      "name": "Harita bölgesi 01",
+      "metropolitan": null
+    },
+    {
+      "id": 2,
+      "name": "Harita bölgesi 02",
+      "metropolitan": null
+    },
+    {
+      "id": 3,
+      "name": "Harita bölgesi 03",
+      "metropolitan": null
+    },
+    {
+      "id": 4,
+      "name": "Harita bölgesi 04",
+      "metropolitan": null
+    },
+    {
+      "id": 5,
+      "name": "Harita bölgesi 05",
+      "metropolitan": null
+    },
+    {
+      "id": 6,
+      "name": "Harita bölgesi 06",
+      "metropolitan": null
+    },
+    {
+      "id": 7,
+      "name": "Harita bölgesi 07",
+      "metropolitan": null
+    },
+    {
+      "id": 8,
+      "name": "Harita bölgesi 08",
+      "metropolitan": null
+    },
+    {
+      "id": 9,
+      "name": "Harita bölgesi 09",
+      "metropolitan": null
+    },
+    {
+      "id": 10,
+      "name": "Harita bölgesi 10",
+      "metropolitan": null
+    },
+    {
+      "id": 11,
+      "name": "Harita bölgesi 11",
+      "metropolitan": null
+    },
+    {
+      "id": 12,
+      "name": "Harita bölgesi 12",
+      "metropolitan": null
+    },
+    {
+      "id": 13,
+      "name": "Harita bölgesi 13",
+      "metropolitan": null
+    },
+    {
+      "id": 14,
+      "name": "Harita bölgesi 14",
+      "metropolitan": null
+    },
+    {
+      "id": 15,
+      "name": "Harita bölgesi 15",
+      "metropolitan": null
+    },
+    {
+      "id": 16,
+      "name": "Harita bölgesi 16",
+      "metropolitan": null
+    },
+    {
+      "id": 17,
+      "name": "Harita bölgesi 17",
+      "metropolitan": null
+    },
+    {
+      "id": 18,
+      "name": "Harita bölgesi 18",
+      "metropolitan": null
+    },
+    {
+      "id": 19,
+      "name": "Harita bölgesi 19",
+      "metropolitan": null
+    },
+    {
+      "id": 20,
+      "name": "Harita bölgesi 20",
+      "metropolitan": null
+    },
+    {
+      "id": 21,
+      "name": "Harita bölgesi 21",
+      "metropolitan": null
+    },
+    {
+      "id": 22,
+      "name": "Harita bölgesi 22",
+      "metropolitan": null
+    },
+    {
+      "id": 23,
+      "name": "Harita bölgesi 23",
+      "metropolitan": null
+    },
+    {
+      "id": 24,
+      "name": "Harita bölgesi 24",
+      "metropolitan": null
+    },
+    {
+      "id": 25,
+      "name": "Harita bölgesi 25",
+      "metropolitan": null
+    },
+    {
+      "id": 26,
+      "name": "Harita bölgesi 26",
+      "metropolitan": null
+    },
+    {
+      "id": 27,
+      "name": "Harita bölgesi 27",
+      "metropolitan": null
+    },
+    {
+      "id": 28,
+      "name": "Harita bölgesi 28",
+      "metropolitan": null
+    },
+    {
+      "id": 29,
+      "name": "Harita bölgesi 29",
+      "metropolitan": null
+    },
+    {
+      "id": 30,
+      "name": "Harita bölgesi 30",
+      "metropolitan": null
+    },
+    {
+      "id": 31,
+      "name": "Harita bölgesi 31",
+      "metropolitan": null
+    },
+    {
+      "id": 32,
+      "name": "Harita bölgesi 32",
+      "metropolitan": null
+    },
+    {
+      "id": 33,
+      "name": "Harita bölgesi 33",
+      "metropolitan": null
+    },
+    {
+      "id": 34,
+      "name": "Harita bölgesi 34",
+      "metropolitan": null
+    },
+    {
+      "id": 35,
+      "name": "Harita bölgesi 35",
+      "metropolitan": null
+    },
+    {
+      "id": 36,
+      "name": "Harita bölgesi 36",
+      "metropolitan": null
+    },
+    {
+      "id": 37,
+      "name": "Harita bölgesi 37",
+      "metropolitan": null
+    },
+    {
+      "id": 38,
+      "name": "Harita bölgesi 38",
+      "metropolitan": null
+    },
+    {
+      "id": 39,
+      "name": "Harita bölgesi 39",
+      "metropolitan": null
+    },
+    {
+      "id": 40,
+      "name": "Harita bölgesi 40",
+      "metropolitan": null
+    },
+    {
+      "id": 41,
+      "name": "Harita bölgesi 41",
+      "metropolitan": null
+    },
+    {
+      "id": 42,
+      "name": "Harita bölgesi 42",
+      "metropolitan": null
+    },
+    {
+      "id": 43,
+      "name": "Harita bölgesi 43",
+      "metropolitan": null
+    },
+    {
+      "id": 44,
+      "name": "Harita bölgesi 44",
+      "metropolitan": null
+    },
+    {
+      "id": 45,
+      "name": "Harita bölgesi 45",
+      "metropolitan": null
+    },
+    {
+      "id": 46,
+      "name": "Harita bölgesi 46",
+      "metropolitan": null
+    },
+    {
+      "id": 47,
+      "name": "Harita bölgesi 47",
+      "metropolitan": null
+    },
+    {
+      "id": 48,
+      "name": "Harita bölgesi 48",
+      "metropolitan": null
+    },
+    {
+      "id": 49,
+      "name": "Harita bölgesi 49",
+      "metropolitan": null
+    },
+    {
+      "id": 50,
+      "name": "Harita bölgesi 50",
+      "metropolitan": null
+    },
+    {
+      "id": 51,
+      "name": "Harita bölgesi 51",
+      "metropolitan": null
+    },
+    {
+      "id": 52,
+      "name": "Harita bölgesi 52",
+      "metropolitan": null
+    },
+    {
+      "id": 53,
+      "name": "Harita bölgesi 53",
+      "metropolitan": null
+    },
+    {
+      "id": 54,
+      "name": "Harita bölgesi 54",
+      "metropolitan": null
+    },
+    {
+      "id": 55,
+      "name": "Harita bölgesi 55",
+      "metropolitan": null
+    },
+    {
+      "id": 56,
+      "name": "Harita bölgesi 56",
+      "metropolitan": null
+    },
+    {
+      "id": 57,
+      "name": "Harita bölgesi 57",
+      "metropolitan": null
+    },
+    {
+      "id": 58,
+      "name": "Harita bölgesi 58",
+      "metropolitan": null
+    },
+    {
+      "id": 59,
+      "name": "Harita bölgesi 59",
+      "metropolitan": null
+    },
+    {
+      "id": 60,
+      "name": "Harita bölgesi 60",
+      "metropolitan": null
+    },
+    {
+      "id": 61,
+      "name": "Harita bölgesi 61",
+      "metropolitan": null
+    },
+    {
+      "id": 62,
+      "name": "Harita bölgesi 62",
+      "metropolitan": null
+    },
+    {
+      "id": 63,
+      "name": "Harita bölgesi 63",
+      "metropolitan": null
+    },
+    {
+      "id": 64,
+      "name": "Harita bölgesi 64",
+      "metropolitan": null
+    },
+    {
+      "id": 65,
+      "name": "Harita bölgesi 65",
+      "metropolitan": null
+    },
+    {
+      "id": 66,
+      "name": "Harita bölgesi 66",
+      "metropolitan": null
+    },
+    {
+      "id": 67,
+      "name": "Harita bölgesi 67",
+      "metropolitan": null
+    },
+    {
+      "id": 68,
+      "name": "Harita bölgesi 68",
+      "metropolitan": null
+    },
+    {
+      "id": 69,
+      "name": "Harita bölgesi 69",
+      "metropolitan": null
+    },
+    {
+      "id": 70,
+      "name": "Harita bölgesi 70",
+      "metropolitan": null
+    },
+    {
+      "id": 71,
+      "name": "Harita bölgesi 71",
+      "metropolitan": null
+    },
+    {
+      "id": 72,
+      "name": "Harita bölgesi 72",
+      "metropolitan": null
+    },
+    {
+      "id": 73,
+      "name": "Harita bölgesi 73",
+      "metropolitan": null
+    },
+    {
+      "id": 74,
+      "name": "Harita bölgesi 74",
+      "metropolitan": null
+    },
+    {
+      "id": 75,
+      "name": "Harita bölgesi 75",
+      "metropolitan": null
+    },
+    {
+      "id": 76,
+      "name": "Harita bölgesi 76",
+      "metropolitan": null
+    },
+    {
+      "id": 77,
+      "name": "Harita bölgesi 77",
+      "metropolitan": null
+    },
+    {
+      "id": 78,
+      "name": "Harita bölgesi 78",
+      "metropolitan": null
+    },
+    {
+      "id": 79,
+      "name": "Harita bölgesi 79",
+      "metropolitan": null
+    },
+    {
+      "id": 80,
+      "name": "Harita bölgesi 80",
+      "metropolitan": null
+    },
+    {
+      "id": 81,
+      "name": "Harita bölgesi 81",
+      "metropolitan": null
+    }
+  ]
+}

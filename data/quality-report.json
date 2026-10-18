@@ -1,583 +1,583 @@
 {
   "asOf": "2026-10-18",
-  "districtTotal": 973,
-  "districtRecords": 261,
-  "districtMissing": 712,
-  "officialDistricts": 210,
-  "districtPartyReported": 179,
-  "districtPartyMissing": 82,
-  "compilationDistricts": 51,
-  "officialProvinces": 6,
-  "compilationProvinces": 74,
+  "districtTotal": 29,
+  "districtRecords": 29,
+  "districtMissing": null,
+  "officialDistricts": 29,
+  "districtPartyReported": 29,
+  "districtPartyMissing": 0,
+  "compilationDistricts": 0,
+  "officialProvinces": 1,
+  "compilationProvinces": 0,
   "conflicts": 1,
   "independentlyVerified": 0,
   "electionPartyKnown": 0,
   "provinceCoverage": [
     {
       "id": 1,
-      "name": "Adana",
-      "districts": 15,
+      "name": "Harita bölgesi 01",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 2,
-      "name": "Adıyaman",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 02",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 3,
-      "name": "Afyonkarahisar",
-      "districts": 18,
-      "records": 1,
+      "name": "Harita bölgesi 03",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 4,
-      "name": "Ağrı",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 04",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 5,
-      "name": "Amasya",
-      "districts": 7,
-      "records": 1,
+      "name": "Harita bölgesi 05",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 6,
-      "name": "Ankara",
-      "districts": 25,
-      "records": 21,
-      "official": 21
+      "name": "Harita bölgesi 06",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 7,
-      "name": "Antalya",
-      "districts": 19,
+      "name": "Harita bölgesi 07",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 8,
-      "name": "Artvin",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 08",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 9,
-      "name": "Aydın",
-      "districts": 17,
+      "name": "Harita bölgesi 09",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 10,
-      "name": "Balıkesir",
-      "districts": 20,
+      "name": "Harita bölgesi 10",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 11,
-      "name": "Bilecik",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 11",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 12,
-      "name": "Bingöl",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 12",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 13,
-      "name": "Bitlis",
-      "districts": 7,
-      "records": 1,
+      "name": "Harita bölgesi 13",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 14,
-      "name": "Bolu",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 14",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 15,
-      "name": "Burdur",
-      "districts": 11,
-      "records": 1,
+      "name": "Harita bölgesi 15",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 16,
-      "name": "Bursa",
-      "districts": 17,
-      "records": 17,
-      "official": 17
+      "name": "Harita bölgesi 16",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 17,
-      "name": "Çanakkale",
-      "districts": 12,
-      "records": 1,
+      "name": "Harita bölgesi 17",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 18,
-      "name": "Çankırı",
-      "districts": 12,
-      "records": 1,
+      "name": "Harita bölgesi 18",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 19,
-      "name": "Çorum",
-      "districts": 14,
-      "records": 1,
+      "name": "Harita bölgesi 19",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 20,
-      "name": "Denizli",
-      "districts": 19,
+      "name": "Harita bölgesi 20",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 21,
-      "name": "Diyarbakır",
-      "districts": 17,
+      "name": "Harita bölgesi 21",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 22,
-      "name": "Edirne",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 22",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 23,
-      "name": "Elazığ",
-      "districts": 11,
-      "records": 1,
+      "name": "Harita bölgesi 23",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 24,
-      "name": "Erzincan",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 24",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 25,
-      "name": "Erzurum",
-      "districts": 20,
+      "name": "Harita bölgesi 25",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 26,
-      "name": "Eskişehir",
-      "districts": 14,
-      "records": 14,
-      "official": 14
+      "name": "Harita bölgesi 26",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 27,
-      "name": "Gaziantep",
-      "districts": 9,
+      "name": "Harita bölgesi 27",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 28,
-      "name": "Giresun",
-      "districts": 16,
-      "records": 1,
+      "name": "Harita bölgesi 28",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 29,
-      "name": "Gümüşhane",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 29",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 30,
-      "name": "Hakkari",
-      "districts": 5,
-      "records": 1,
+      "name": "Harita bölgesi 30",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 31,
-      "name": "Hatay",
-      "districts": 15,
+      "name": "Harita bölgesi 31",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 32,
-      "name": "Isparta",
-      "districts": 13,
-      "records": 1,
+      "name": "Harita bölgesi 32",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 33,
-      "name": "Mersin",
-      "districts": 13,
+      "name": "Harita bölgesi 33",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 34,
-      "name": "İstanbul",
-      "districts": 39,
-      "records": 39,
-      "official": 39
+      "name": "Harita bölgesi 34",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 35,
       "name": "İzmir",
-      "districts": 30,
+      "districts": 29,
       "records": 29,
       "official": 29
     },
     {
       "id": 36,
-      "name": "Kars",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 36",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 37,
-      "name": "Kastamonu",
-      "districts": 20,
-      "records": 1,
+      "name": "Harita bölgesi 37",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 38,
-      "name": "Kayseri",
-      "districts": 16,
-      "records": 16,
-      "official": 16
+      "name": "Harita bölgesi 38",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 39,
-      "name": "Kırklareli",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 39",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 40,
-      "name": "Kırşehir",
-      "districts": 7,
-      "records": 1,
+      "name": "Harita bölgesi 40",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 41,
-      "name": "Kocaeli",
-      "districts": 12,
-      "records": 12,
-      "official": 12
+      "name": "Harita bölgesi 41",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 42,
-      "name": "Konya",
-      "districts": 31,
-      "records": 31,
-      "official": 31
+      "name": "Harita bölgesi 42",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 43,
-      "name": "Kütahya",
-      "districts": 13,
-      "records": 1,
+      "name": "Harita bölgesi 43",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 44,
-      "name": "Malatya",
-      "districts": 13,
+      "name": "Harita bölgesi 44",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 45,
-      "name": "Manisa",
-      "districts": 17,
+      "name": "Harita bölgesi 45",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 46,
-      "name": "Kahramanmaraş",
-      "districts": 11,
+      "name": "Harita bölgesi 46",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 47,
-      "name": "Mardin",
-      "districts": 10,
+      "name": "Harita bölgesi 47",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 48,
-      "name": "Muğla",
-      "districts": 13,
-      "records": 13,
-      "official": 13
+      "name": "Harita bölgesi 48",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 49,
-      "name": "Muş",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 49",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 50,
-      "name": "Nevşehir",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 50",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 51,
-      "name": "Niğde",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 51",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 52,
-      "name": "Ordu",
-      "districts": 19,
+      "name": "Harita bölgesi 52",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 53,
-      "name": "Rize",
-      "districts": 12,
-      "records": 1,
+      "name": "Harita bölgesi 53",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 54,
-      "name": "Sakarya",
-      "districts": 16,
+      "name": "Harita bölgesi 54",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 55,
-      "name": "Samsun",
-      "districts": 17,
+      "name": "Harita bölgesi 55",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 56,
-      "name": "Siirt",
-      "districts": 7,
-      "records": 1,
+      "name": "Harita bölgesi 56",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 57,
-      "name": "Sinop",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 57",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 58,
-      "name": "Sivas",
-      "districts": 17,
-      "records": 1,
+      "name": "Harita bölgesi 58",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 59,
-      "name": "Tekirdağ",
-      "districts": 11,
+      "name": "Harita bölgesi 59",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 60,
-      "name": "Tokat",
-      "districts": 12,
-      "records": 1,
+      "name": "Harita bölgesi 60",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 61,
-      "name": "Trabzon",
-      "districts": 18,
-      "records": 18,
-      "official": 18
+      "name": "Harita bölgesi 61",
+      "districts": 0,
+      "records": 0,
+      "official": 0
     },
     {
       "id": 62,
-      "name": "Tunceli",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 62",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 63,
-      "name": "Şanlıurfa",
-      "districts": 13,
+      "name": "Harita bölgesi 63",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 64,
-      "name": "Uşak",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 64",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 65,
-      "name": "Van",
-      "districts": 13,
+      "name": "Harita bölgesi 65",
+      "districts": 0,
       "records": 0,
       "official": 0
     },
     {
       "id": 66,
-      "name": "Yozgat",
-      "districts": 14,
-      "records": 1,
+      "name": "Harita bölgesi 66",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 67,
-      "name": "Zonguldak",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 67",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 68,
-      "name": "Aksaray",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 68",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 69,
-      "name": "Bayburt",
-      "districts": 3,
-      "records": 1,
+      "name": "Harita bölgesi 69",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 70,
-      "name": "Karaman",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 70",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 71,
-      "name": "Kırıkkale",
-      "districts": 9,
-      "records": 1,
+      "name": "Harita bölgesi 71",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 72,
-      "name": "Batman",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 72",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 73,
-      "name": "Şırnak",
-      "districts": 7,
-      "records": 1,
+      "name": "Harita bölgesi 73",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 74,
-      "name": "Bartın",
-      "districts": 4,
-      "records": 1,
+      "name": "Harita bölgesi 74",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 75,
-      "name": "Ardahan",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 75",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 76,
-      "name": "Iğdır",
-      "districts": 4,
-      "records": 1,
+      "name": "Harita bölgesi 76",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 77,
-      "name": "Yalova",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 77",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 78,
-      "name": "Karabük",
-      "districts": 6,
-      "records": 1,
+      "name": "Harita bölgesi 78",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 79,
-      "name": "Kilis",
-      "districts": 4,
-      "records": 1,
+      "name": "Harita bölgesi 79",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 80,
-      "name": "Osmaniye",
-      "districts": 7,
-      "records": 1,
+      "name": "Harita bölgesi 80",
+      "districts": 0,
+      "records": 0,
       "official": 0
     },
     {
       "id": 81,
-      "name": "Düzce",
-      "districts": 8,
-      "records": 1,
+      "name": "Harita bölgesi 81",
+      "districts": 0,
+      "records": 0,
       "official": 0
     }
   ]

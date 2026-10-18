@@ -1,65 +1,43 @@
-# Seçim Takvimi
+# Seçim Takvimi — resmî API politikası
 
-Türkiye'deki seçimler için mobil uyumlu, bağımsız ve açık kaynaklı geri sayım paneli. HTML, CSS ve JavaScript kullanır; derleme veya paket kurulumu gerektirmez.
+Bağımsız seçim ve temsil arayüzü. `index.html` doğrudan açılabilir; çalışma zamanı için paket kurulumu gerekmez.
 
-## Çalıştırma
+## Siyasi veri kaynakları
 
-`index.html` dosyasını tarayıcıda açın veya klasörü herhangi bir statik web sunucusunda yayınlayın. Bağlantı paylaşımı HTTP/HTTPS üzerinden çalışır. Google Fonts erişilemezse sistem yazı tipleri kullanılır.
+Siyasi görevler, parti bilgileri, seçim tarihleri ve sonuçları için yalnızca `data/official-api-sources.json` izin listesindeki resmî API uçları kabul edilir. HTML, PDF, haber, arama dizini ve üçüncü taraf derleme yedek kaynak olamaz. Önceki bu tür siyasi kayıtlar dağıtılan veri dosyasından kaldırıldı.
 
-## Özellikler
+Bağlı kaynak: İzmir Büyükşehir Belediyesi meclis üyeleri API'si. API sahipliği ve kapsamı kurumun açık veri kataloğunda belgelenir:
+https://acikveri.bizizmir.com/tr/dataset/meclis-uyeleri/resource/5ec4f015-d2ff-4fc7-a91d-dda03961c26b
 
-- Telefon, tablet ve masaüstüne uyumlu üç seçim kartı
-- Türkiye saatine sabit hedef tarihler (`+03:00`)
-- Sistem temasını izleyen, kullanıcı seçimini hatırlayan açık/koyu tema
-- Tahmini tarih uyarısı ve YSK bağlantısı
-- Tam günlük, “Tahmini” başlıklı ICS takvim hatırlatmaları
-- Bağlantı paylaşımı ve pano desteği
-- Tarih geçince sıfırlanan sayaç ve güncelleme mesajı
-- Arka planda durdurulan, sekmeye dönünce yenilenen sayaç
+Son doğrudan API okuması 29 ilçe başkanı kaydı sağladı. İzmir il başkanı parti kaydı incelemede tutulur; yalnızca API yanıtı bulunması bağımsız güncellik doğrulaması değildir.
 
-## Tarihleri güncelleme
+Cumhurbaşkanı, güncel milletvekilleri, sandalye dağılımı ve gelecekteki seçim tarihleri için uygun resmî API bağlantısı henüz yok. Bunlar boş bırakılır. Erişilebilir bir API bulunamadı demek, kurumun hiçbir özel veya yetkilendirmeli servisi olmadığı iddiası değildir. YSK geçmiş seçim sonuçları güncel görev ve parti bilgileri yerine geçirilmez.
 
-`index.html` içindeki her kartın `<time datetime="...">` değerini ve görünen tarih metnini birlikte düzenleyin. JavaScript hedefleri bu öğelerden okur. Mevcut tarihler önceki projenin varsayımlarından alınmıştır; doğrulanmış resmî seçim tarihleri veya oy verme saatleri değildir. Resmî takvim yayımlandığında tarihleri, rozetleri ve uyarı metinlerini kaynaklarıyla birlikte güncelleyin.
+## Yenileme
+
+Node.js 20 veya üstü ile:
+
+```
+npm run refresh:official
+```
+
+Bu komut resmî API'ye doğrudan GET yapar; sabit uç nokta, yönlendirme, HTTP durumu, JSON içerik türü, şema, belediye eşleşmesi ve yinelenen görev kontrollerinden sonra veri paketini üretir. Hata durumunda HTML/derleme veya önceki politik veri setine dönülmez. Başarısız çalışmada ilgili bölüm boş ve çalışma durumu hatalı olarak kaydedilir; komut hata koduyla biter.
+
+`data/api/izmir-meclis.json` ham API yanıtıdır. `data/politics.json` normalize edilmiş siyasi kayıtlardır. `data/source-manifest.json` API yanıt özeti ve SHA-256 değerini içerir; resmî dijital imza değildir. `javascript/politics-data.js` yerel dosyadan açılabilmesi için aynı verinin betik paketidir.
+
+Tarayıcı son alınan API yanıtının paketlenmiş kopyasını gösterir. Canlı veri akışı veya zamanlanmış otomatik yenileme yoktur. Yeni bir kurum API'si için kaynak sahipliği, belge, erişim yetkisi ve yanıt şeması doğrulanmalı; ayrıca adaptör ve testleri eklenmelidir. Sadece kaynak etiketini “resmî” yapmak kabul edilmez.
+
+## Veri sözleşmesi
+
+Şema 4, `sourcePolicy: official-api-only`. Her siyasi kayıt ve bildirim API kimliği ile izin verilen uç noktaya bağlıdır. API'nin bildirmediği seçildiği parti alanı boş kalır; bağımsız doğrulama tarihleri uydurulmaz. İncelemedeki kayıtlara kesin parti atanmaz. API verisi yokluğu sıfır vekil veya boş Meclis olarak gösterilmez. Tarih API'si bağlanmadığı için önceki tahmini tarihler ve ICS indirmeleri kaldırılmıştır.
+
+Üçüncü taraf il/ilçe sözlüğü de kaldırılmıştır. İlçe adları doğrudan resmî API unvanlarından üretilir. API ile bağlanamayan harita şekilleri yer adı yerine “Harita bölgesi” arayüz etiketi alır. `data/map-regions.json` yalnızca çizim kimliklerini içerir; bunlar resmî idari bölge kodu iddiası taşımaz. Ulusal ilçe sayısı bilinmiyor olarak tutulur; eksik kayıt sayısı sıfır diye gösterilmez. Harita çizimi ayrı lisanslı görsel varlıktır; siyasi bilgi kaynağı değildir. Kaynakları THIRD-PARTY.md içinde açıklanır.
 
 ## Kontrol
 
-Node.js ile `node --check javascript/timer.js` komutu JavaScript sözdizimini kontrol eder. Sayaç ve takvim işlevleri Node.js altında `require('./javascript/timer.js')` ile ayrıca sınanabilir.
+```
+npm install
+npm test
+```
 
-Bu proje herhangi bir resmî kurumla bağlantılı değildir.
-
-## Temsil haritası
-
-- Tıklanabilir 81 il; klavye ile Enter / Boşluk ve alternatif il seçimi
-- Belediye yönetimi / mevcut milletvekili dağılımı harita görünümleri, parti filtresi
-- İl bazında belediye başkanı, parti kaydı, ilçe araması ve milletvekili profilleri
-- TBMM kaynaklarından 592 milletvekili; parti toplamları listeyle birebir kontrol edilmiştir
-- 600 sandalye noktası, boş koltuklar ve tüm partilerin sayısal tablosu
-- Cumhurbaşkanı ve parti bilgisi
-- İl bağlantıları `#il=34` biçiminde paylaşılabilir
-
-Veri kapsamı **tam doğrulanmış güncel belediye rehberi değildir**. 973 ilçenin 261'inde başkan kaydı vardır: 210 kayıt resmî listelerden, 51 Merkez ilçe kaydı teyit bekleyen derlemedendir. 712 ilçe kaydı eksiktir. İl belediyelerinde 6 resmî kaynaklı kayıt, 74 derleme kaydı ve 1 çözülemeyen parti çelişkisi vardır. Resmî kaynaklı olmak bağımsız doğrulama anlamına gelmez. Hiçbir belediye kaydına bağımsız doğrulama yapılmış gibi tarih atanmaz; otomatik güncelleme yoktur.
-
-`data/politics.json` makinece okunabilir veri kaydıdır. `javascript/politics-data.js` aynı verinin `file://` üzerinden de çalışması için betik sürümüdür. Veri güncellenirken ikisini birlikte üretin. `data/turkey.svg` ve `javascript/map-data.js` de aynı haritanın iki paketidir. Veri ve harita lisansları için `THIRD-PARTY.md` dosyasına bakın.
-
-Geliştirici kontrolleri: `npm install` ardından `npm test`. Bu kurulum yalnızca DOM testleri içindir; siteyi çalıştırmak için gerekmez. JSON / SVG kaynakları düzenlendikten sonra `npm run sync:data` betik paketlerini yeniden üretir ve veri tutarlılığını kontrol eder. DOM testleri görsel tarayıcı testinin yerine geçmez.
-
-
-## Veri güvenilirliği sözleşmesi (şema 3)
-
-- `officeHolder`: kaynağın bildirdiği görevi yürüten kişi ve unvan; seçilmiş başkanla aynı olduğu varsayılmaz.
-- `electedParty`: seçim kaynağıyla ayrıca belgelenmedikçe `null`.
-- `currentParty`: yalnızca çelişkisiz resmî kaynağın bildirimi; derleme veya çelişkili kayıtta `null`.
-- `claims`: her bildirimin kişi, parti, kaynak URL, kaynak türü ve okuma tarihi. Arama dizini kaydı doğrudan sayfa okumasından ayrılır.
-- `retrievedAt`: kaynağın okunduğu tarih. `lastVerifiedAt`: bağımsız doğrulama yapılmadığı sürece `null`.
-- `verification`: `primary` (resmî bildirim), `secondary` (derleme) veya `conflict` (çözülemeyen çelişki). `primary`, bağımsız doğrulama iddiası değildir.
-
-Varsayılan belediye haritası teyit bekleyen derlemeleri renklendirmez. Kullanıcı bunları isteğe bağlı açabilir; çelişkiler her iki durumda da nötrdür. 30 günden eski kaynak okuması detaylarda yeniden kontrol uyarısı alır.
-
-`data/quality-report.json` il bazında veri kapsamını sunar; `data/source-manifest.json` bu tur okunan resmî HTML dosyalarının SHA-256 parmak izlerini içerir. Parmak izleri resmî dijital imza değildir. `scripts/validate-data.cjs` bozuk tarih, tekrar eden kimlik, seçim kaynağı olmayan seçildiği parti, çelişkiye atanmış kesin parti ve tutarsız sandalye toplamını reddeder. `npm run sync:data` doğrulama geçmeden paket üretmez. `npm test` hem veri sözleşmesini hem DOM etkileşimlerini sınar.
-
-
-## Kapsam genişletmesi
-
-Kayseri (16), Trabzon (18) ve Konya (31) resmî meclis listelerinden 65 ilçe başkanı kaydı daha eklendi. Konya kaynağı parti bildirmediği için 31 ilçenin güncel parti alanı `null` bırakıldı. Resmî kaynaklı 210 ilçe kaydının 179'unda parti bildirimi vardır; başkan isminin bulunması parti bilgisinin doğrulandığı anlamına gelmez.
-
-Mersin'in 13 Ekim 2026 tarihli resmî başkan vekili seçimi haberi, meclis listesinin eski görev bilgisinden ayrıldı. Görevi yürüten kişi Gülşah Yıldırım Genç / başkan vekili olarak kaydedildi. Eski liste bildirimi `superseded` etiketiyle korundu; geçmiş bildirimler güncel görev gibi gösterilmez.
+Testler resmî API izin listesini, HTML yanıtlarının reddini, bozuk JSON / HTTP hatalarını, kaynak sözleşmesini, eksik veri durumlarını ve arayüz etkileşimlerini sınar. `npm run sync:data` API kaynaklı normalize edilmiş veriyi tekrar paketler; yeni siyasi bilgi toplamaz.

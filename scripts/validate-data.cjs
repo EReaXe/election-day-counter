@@ -4,7 +4,13 @@ function validDate(value) {
   return typeof value==='string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0,10)===value;
 }
 function validate(data) {
-  assert.equal(data.schemaVersion,3,'Veri şeması sürümü 3 olmalı');
+  assert.equal(data.schemaVersion,4,'Veri şeması sürümü 4 olmalı');
+  assert.equal(data.sourcePolicy,'official-api-only','Yalnızca resmî API kabul edilir');
+  const registry=require('../data/official-api-sources.json');
+  const endpoints=new Map(registry.sources.map(s=>[s.id,s.endpoint]));
+  for(const section of ['president','parliament','calendar'])assert.equal(data.availability[section],false,'Bu bölüm için onaylı API adaptörü yok: '+section);
+  if(!data.availability.parliament)assert(data.mps.length===0&&data.seats.length===0&&data.capacity===null,'API yokken Meclis sayısı gösterilemez');
+  if(!data.availability.president)assert.equal(data.president,null,'API yokken Cumhurbaşkanı kaydı gösterilemez');
   assert(validDate(data.asOf),'Kaynak tarihi geçersiz');
   assert.equal(data.provinces.length,81,'81 il bulunmalı');
   const provinceIds=new Set(data.provinces.map(p=>p.id));
@@ -22,25 +28,28 @@ function validate(data) {
   for(const d of data.districts)assert(provinceIds.has(d.provinceId),'İlçe geçerli bir ile bağlı olmalı');
   for(const entity of data.provinces.concat(data.districts)) {
     const record=entity.mayor;if(!record)continue;
-    assert(['primary','secondary','conflict'].includes(record.verification),'Kaynak durumu geçersiz');
+    assert(['primary','review-required'].includes(record.verification),'API dışı doğrulama türü kabul edilmez');
+    assert.equal(record.sourceType,'official-api','Siyasi kaydın kaynağı resmî API olmalı');
+    assert(endpoints.has(record.sourceId)&&endpoints.get(record.sourceId)===record.source,'API izin listesinde bulunmalı');
     assert(record.name&&record.officeHolder?.name===record.name,'Görevi yürüten kişinin kaydı eksik');
     assert(validDate(record.retrievedAt),'Kaynak okuma tarihi geçersiz');
     assert(record.retrievedAt<=data.asOf,'Okuma tarihi veri tarihinden sonra olamaz');
     assert(record.lastVerifiedAt===null||validDate(record.lastVerifiedAt),'Bağımsız doğrulama tarihi geçersiz');
-    assert(record.electedParty===null||record.electionSource,'Seçildiği parti için seçim kaynağı gerekli');
+    assert.equal(record.electedParty,null,'Bağlı API seçildiği parti bilgisini sağlamıyor');
+    assert.equal(record.lastVerifiedAt,null,'Bağımsız doğrulama adaptörü bağlı değil');
     assert(Array.isArray(record.claims)&&record.claims.length,'Kaynak bildirimi gerekli');
     for(const claim of record.claims) {
       const url=new URL(claim.source);
+      assert.equal(claim.sourceType,'official-api','HTML, arama dizini ve derleme bildirimi kabul edilmez');
+      assert.equal(claim.source,record.source,'Bildirim API uç noktasıyla eşleşmeli');
       assert(url.protocol==='https:'||url.protocol==='http:','Güvenli kaynak URL gerekli');
       assert(validDate(claim.retrievedAt),'Bildirim okuma tarihi geçersiz');
       assert(claim.sourceLabel&&claim.name,'Kaynak adı ve kişi gerekli');
     }
-    if(record.verification==='conflict') {
-      assert.equal(record.currentParty,null,'Çelişkili kayda kesin güncel parti atanamaz');
-      assert.equal(record.party,null,'Çelişkili kayda kesin harita partisi atanamaz');
-      assert(record.conflictNote&&record.claims.length>=2,'Çelişki açıklaması ve iki bildirim gerekli');
+    if(record.verification==='review-required') {
+      assert.equal(record.currentParty,null,'İncelemedeki kayda kesin güncel parti atanamaz');
+      assert.equal(record.party,null,'İncelemedeki kayda kesin harita partisi atanamaz');
     }
-    if(record.verification==='secondary')assert.equal(record.currentParty,null,'Derleme güncel parti doğrulaması değildir');
   }
   return true;
 }

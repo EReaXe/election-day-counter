@@ -1,82 +1,13 @@
 {
-  "retrievedAt": "2026-10-18",
-  "files": [
+  "policy": "official-api-only",
+  "runs": [
     {
-      "file": "ankara-1.html",
-      "sha256": "f09bef0d7003edfcc05e7d16c88ed99873b2162e2bd2a2141c6cbe6e544c81bf"
-    },
-    {
-      "file": "ankara-2.html",
-      "sha256": "e8e283ba076bd48a6a47188674ea54d7dea443217e816e275f12d404c643c736"
-    },
-    {
-      "file": "ankara-3.html",
-      "sha256": "0a45ba5b98825abc6b2c6f15493236fd337d0ee93577942e18da70a117d4a0ec"
-    },
-    {
-      "file": "ankara-4.html",
-      "sha256": "d0bdb1e45ee2fa0bfd0b46faae5edd8268083bbaa6cc6ac56aa054d5468891ad"
-    },
-    {
-      "file": "ankara-5.html",
-      "sha256": "6eaf117294ab81f30c88e5e4d0395b5b99cb26aa07b23ff72d05ec9eb90bb957"
-    },
-    {
-      "file": "ankara-6.html",
-      "sha256": "3fd910540843d7c01f1d4d90659f3e3d523c6211f83403e34ffae48c9ac7faad"
-    },
-    {
-      "file": "ankara-7.html",
-      "sha256": "9cd57d60c02fad4d777e3e19627fef13fa1ac80bb99958702533d69df975c3ab"
-    },
-    {
-      "file": "ankara-8.html",
-      "sha256": "3d1c9a79fd53b489cd6f3f11423a58df8581138847d527263388bc3bc1100ad8"
-    },
-    {
-      "file": "bursa.html",
-      "sha256": "922ee48173a722b681d23dde32a74f1dc0b9d1eba60a9404770182fafbf8e261"
-    },
-    {
-      "file": "kocaeli.html",
-      "sha256": "b89c4429ce8a7b65becd0f1f31ec14356738cb89683e5c0536dd5075fff13fdc"
-    },
-    {
-      "file": "mugla.html",
-      "sha256": "8bbde2910a0c067821d791372ac82e4386ea10f3ad6ae16e666cd4bd60d89df3"
-    },
-    {
-      "file": "eskisehir.html",
-      "sha256": "6fb64bff2cf0a167ffae23014d95d6e2b5da9bcf2328f99cd7cc3ddab34c8cbb"
-    },
-    {
-      "file": "izmir-bio.html",
-      "sha256": "4e1989b3691c56273b6bb53536163a0889fff74db5f2f400bef9587196b35adb"
-    },
-    {
-      "file": "kayseri.html",
-      "url": "https://www.kayseri.bel.tr/meclis-uyeleri",
-      "sha256": "24cfdddb341ffb5641b7f479d8317a8e7ecd2316e1034ed0772a493ac311f863"
-    },
-    {
-      "file": "trabzon.html",
-      "url": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
-      "sha256": "f41375dadfcad5797b2fbbe275839d20fd2acd931f0982e5f493127785589729"
-    },
-    {
-      "file": "konya-members.html",
-      "url": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
-      "sha256": "a31d94964397f71524ae7711e814fd505a3d33fb22f1f26c8c06a64961b09ced"
-    },
-    {
-      "file": "mersin-acting.html",
-      "url": "https://www.mersin.bel.tr/haber/mersin-buyuksehir-belediyesi-baskan-vekili-chpnin-adayi-gulsah-yildirim-genc-oldu-1791903220",
-      "sha256": "190a26723e3d995926cd31de22e8150ec38ae47e4e8a5accf54affd48e2ef961"
-    },
-    {
-      "file": "mersin.html",
-      "url": "https://www.mersin.bel.tr/kurumsal/belediye-meclisi",
-      "sha256": "e73951639649fd19bf021ab791f60b36cfac8f5e7a2e2956c96d44e03906ecd5"
+      "sourceId": "izmir-council",
+      "endpoint": "https://acikveriwapi.izmir.bel.tr/IzBel/MeclisUyeleriniGetir",
+      "observedAt": "2026-10-18T12:52:10.820Z",
+      "status": "ok",
+      "imported": 30,
+      "sha256": "9234a13eca8ef176f973f851280da0c067c07ef6885b93d294082d5aa31fa742"
     }
   ]
 }
