@@ -37,7 +37,7 @@ Bu proje herhangi bir resmî kurumla bağlantılı değildir.
 - Cumhurbaşkanı ve parti bilgisi
 - İl bağlantıları `#il=34` biçiminde paylaşılabilir
 
-Veri kapsamı **tam doğrulanmış güncel belediye rehberi değildir**. 973 ilçenin 196'sında başkan kaydı vardır: 145 kayıt resmî listelerden, 51 Merkez ilçe kaydı teyit bekleyen derlemedendir. 777 ilçe kaydı eksiktir. İl belediyelerinde 4 resmî kaynaklı kayıt, 76 derleme kaydı ve 1 çözülemeyen parti çelişkisi vardır. Resmî kaynaklı olmak bağımsız doğrulama anlamına gelmez. Hiçbir belediye kaydına bağımsız doğrulama yapılmış gibi tarih atanmaz; otomatik güncelleme yoktur.
+Veri kapsamı **tam doğrulanmış güncel belediye rehberi değildir**. 973 ilçenin 261'inde başkan kaydı vardır: 210 kayıt resmî listelerden, 51 Merkez ilçe kaydı teyit bekleyen derlemedendir. 712 ilçe kaydı eksiktir. İl belediyelerinde 6 resmî kaynaklı kayıt, 74 derleme kaydı ve 1 çözülemeyen parti çelişkisi vardır. Resmî kaynaklı olmak bağımsız doğrulama anlamına gelmez. Hiçbir belediye kaydına bağımsız doğrulama yapılmış gibi tarih atanmaz; otomatik güncelleme yoktur.
 
 `data/politics.json` makinece okunabilir veri kaydıdır. `javascript/politics-data.js` aynı verinin `file://` üzerinden de çalışması için betik sürümüdür. Veri güncellenirken ikisini birlikte üretin. `data/turkey.svg` ve `javascript/map-data.js` de aynı haritanın iki paketidir. Veri ve harita lisansları için `THIRD-PARTY.md` dosyasına bakın.
 
@@ -56,3 +56,10 @@ Geliştirici kontrolleri: `npm install` ardından `npm test`. Bu kurulum yalnız
 Varsayılan belediye haritası teyit bekleyen derlemeleri renklendirmez. Kullanıcı bunları isteğe bağlı açabilir; çelişkiler her iki durumda da nötrdür. 30 günden eski kaynak okuması detaylarda yeniden kontrol uyarısı alır.
 
 `data/quality-report.json` il bazında veri kapsamını sunar; `data/source-manifest.json` bu tur okunan resmî HTML dosyalarının SHA-256 parmak izlerini içerir. Parmak izleri resmî dijital imza değildir. `scripts/validate-data.cjs` bozuk tarih, tekrar eden kimlik, seçim kaynağı olmayan seçildiği parti, çelişkiye atanmış kesin parti ve tutarsız sandalye toplamını reddeder. `npm run sync:data` doğrulama geçmeden paket üretmez. `npm test` hem veri sözleşmesini hem DOM etkileşimlerini sınar.
+
+
+## Kapsam genişletmesi
+
+Kayseri (16), Trabzon (18) ve Konya (31) resmî meclis listelerinden 65 ilçe başkanı kaydı daha eklendi. Konya kaynağı parti bildirmediği için 31 ilçenin güncel parti alanı `null` bırakıldı. Resmî kaynaklı 210 ilçe kaydının 179'unda parti bildirimi vardır; başkan isminin bulunması parti bilgisinin doğrulandığı anlamına gelmez.
+
+Mersin'in 13 Ekim 2026 tarihli resmî başkan vekili seçimi haberi, meclis listesinin eski görev bilgisinden ayrıldı. Görevi yürüten kişi Gülşah Yıldırım Genç / başkan vekili olarak kaydedildi. Eski liste bildirimi `superseded` etiketiyle korundu; geçmiş bildirimler güncel görev gibi gösterilmez.

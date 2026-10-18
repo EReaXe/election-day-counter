@@ -1,12 +1,14 @@
 {
   "asOf": "2026-10-18",
   "districtTotal": 973,
-  "districtRecords": 196,
-  "districtMissing": 777,
-  "officialDistricts": 145,
+  "districtRecords": 261,
+  "districtMissing": 712,
+  "officialDistricts": 210,
+  "districtPartyReported": 179,
+  "districtPartyMissing": 82,
   "compilationDistricts": 51,
-  "officialProvinces": 4,
-  "compilationProvinces": 76,
+  "officialProvinces": 6,
+  "compilationProvinces": 74,
   "conflicts": 1,
   "independentlyVerified": 0,
   "electionPartyKnown": 0,
@@ -274,8 +276,8 @@
       "id": 38,
       "name": "Kayseri",
       "districts": 16,
-      "records": 0,
-      "official": 0
+      "records": 16,
+      "official": 16
     },
     {
       "id": 39,
@@ -302,8 +304,8 @@
       "id": 42,
       "name": "Konya",
       "districts": 31,
-      "records": 0,
-      "official": 0
+      "records": 31,
+      "official": 31
     },
     {
       "id": 43,
@@ -435,8 +437,8 @@
       "id": 61,
       "name": "Trabzon",
       "districts": 18,
-      "records": 0,
-      "official": 0
+      "records": 18,
+      "official": 18
     },
     {
       "id": 62,

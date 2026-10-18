@@ -11,6 +11,14 @@ assert.equal(quality.officialDistricts+quality.compilationDistricts,quality.dist
 assert.equal(quality.conflicts,1);
 assert.equal(quality.independentlyVerified,0);
 assert.equal(quality.electionPartyKnown,0);
+assert(quality.districtPartyReported<=quality.officialDistricts);
+const konya=data.districts.filter(d=>d.provinceId===42);
+assert.equal(konya.filter(d=>d.mayor).length,31);
+assert(konya.every(d=>d.mayor.currentParty===null&&d.mayor.fieldNotes.currentParty));
+const mersin=data.provinces.find(p=>p.id===33).mayor;
+assert.equal(mersin.name,'Gülşah Yıldırım Genç');
+assert.equal(mersin.role,'Başkan vekili');
+assert(mersin.claims.some(c=>c.superseded));
 const izmir=data.provinces.find(p=>p.id===35).mayor;
 assert.equal(izmir.currentParty,null);
 assert(izmir.claims.some(c=>c.observationMethod==='search-index'&&c.availability==='unavailable'));
