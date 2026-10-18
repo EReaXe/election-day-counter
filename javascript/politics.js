@@ -54,7 +54,7 @@
 
   let selected = Number(new URLSearchParams(location.hash.slice(1)).get('il')) || 34;
   if (!data.provinces.some(p => p.id === selected)) selected = 34;
-  let mode = 'municipality';
+  let mode = 'parliament';
   let filter = '';
   let includeCompilations = false;
   const mpGroups = new Map(data.provinces.map(p => [p.id, data.mps.filter(m => m.provinceId === p.id)]));

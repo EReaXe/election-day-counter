@@ -17,6 +17,14 @@ for (const file of ['politics-data.js','data-quality.js','map-data.js','politics
 const $ = selector => document.querySelector(selector);
 const all = selector => [...document.querySelectorAll(selector)];
 const data = window.POLITICS_DATA;
+const ids=all('[id]').map(node=>node.id);
+assert.equal(new Set(ids).size,ids.length,'ID değerleri tekil olmalı');
+for(const a of all('a')) {
+  const href=a.getAttribute('href');
+  if(href?.startsWith('#'))assert(document.getElementById(href.slice(1)),'Menü hedefi bulunmalı');
+}
+assert.equal($('#map-mode').value,'parliament');
+assert.equal(document.querySelector('.coverage-disclosure').hasAttribute('open'),false);
 assert.equal(all('#turkey-map [role="button"]').length,81);
 assert.equal(all('#seat-chart circle').length,600);
 assert.equal($('#seat-total').textContent,'592');
