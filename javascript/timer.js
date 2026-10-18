@@ -1,66 +1,113 @@
-// Seçim tarihini burada ayarlayın
-var electionDate1 = new Date("May 28, 2028 08:00:00");
-var electionDate2 = new Date("May 28, 2028 08:00:00");
-var electionDate3 = new Date("March 31, 2029 08:00:00");
+/* Hedefler tarihsel proje varsayımlarıdır; resmî seçim takvimi değildir.
+   Tarih ve saat bilgisi index.html içindeki <time> öğelerinden okunur. */
+'use strict';
 
-// A tanımlanan sayaç öğelerine referans
-var daysElemA = document.getElementById("daysA");
-var hoursElemA = document.getElementById("hoursA");
-var minutesElemA = document.getElementById("minutesA");
-var secondsElemA = document.getElementById("secondsA");
-// B tanımlanan sayaç öğelerine referans
-var daysElemB = document.getElementById("daysB");
-var hoursElemB = document.getElementById("hoursB");
-var minutesElemB = document.getElementById("minutesB");
-var secondsElemB = document.getElementById("secondsB");
-// C tanımlanan sayaç öğelerine referans
-var daysElemC = document.getElementById("daysC");
-var hoursElemC = document.getElementById("hoursC");
-var minutesElemC = document.getElementById("minutesC");
-var secondsElemC = document.getElementById("secondsC");
-
-// Sayaç işlemini yapan fonksiyon
-function updateCountdown() {
-  // Şimdiki tarihi al
-  var now = new Date();
-
-  // Kalan süreyi hesapla
-  var timeRemainingA = electionDate1 - now;
-  var timeRemainingB = electionDate2 - now;
-  var timeRemainingC = electionDate3 - now;
-
-  // A Kalan süreden gün, saat, dakika ve saniyeleri hesapla
-  var daysA = Math.floor(timeRemainingA / (1000 * 60 * 60 * 24));
-  var hoursA = Math.floor((timeRemainingA / (1000 * 60 * 60)) % 24);
-  var minutesA = Math.floor((timeRemainingA / 1000 / 60) % 60);
-  var secondsA = Math.floor((timeRemainingA / 1000) % 60);
-  // B Kalan süreden gün, saat, dakika ve saniyeleri hesapla
-  var daysB = Math.floor(timeRemainingB / (1000 * 60 * 60 * 24));
-  var hoursB = Math.floor((timeRemainingB / (1000 * 60 * 60)) % 24);
-  var minutesB = Math.floor((timeRemainingB / 1000 / 60) % 60);
-  var secondsB = Math.floor((timeRemainingB / 1000) % 60);
-  // C Kalan süreden gün, saat, dakika ve saniyeleri hesapla
-  var daysC = Math.floor(timeRemainingC / (1000 * 60 * 60 * 24));
-  var hoursC = Math.floor((timeRemainingC / (1000 * 60 * 60)) % 24);
-  var minutesC = Math.floor((timeRemainingC / 1000 / 60) % 60);
-  var secondsC = Math.floor((timeRemainingC / 1000) % 60);
-
-  // A Sayaç öğelerinde kalan süreyi güncelle
-  daysElemA.innerText = daysA < 10 ? "0" + daysA : daysA;
-  hoursElemA.innerText = hoursA < 10 ? "0" + hoursA : hoursA;
-  minutesElemA.innerText = minutesA < 10 ? "0" + minutesA : minutesA;
-  secondsElemA.innerText = secondsA < 10 ? "0" + secondsA : secondsA;
-  // B Sayaç öğelerinde kalan süreyi güncelle
-  daysElemB.innerText = daysB < 10 ? "0" + daysB : daysB;
-  hoursElemB.innerText = hoursB < 10 ? "0" + hoursB : hoursB;
-  minutesElemB.innerText = minutesB < 10 ? "0" + minutesB : minutesB;
-  secondsElemB.innerText = secondsB < 10 ? "0" + secondsB : secondsB;
-  // C Sayaç öğelerinde kalan süreyi güncelle
-  daysElemC.innerText = daysC < 10 ? "0" + daysC : daysC;
-  hoursElemC.innerText = hoursC < 10 ? "0" + hoursC : hoursC;
-  minutesElemC.innerText = minutesC < 10 ? "0" + minutesC : minutesC;
-  secondsElemC.innerText = secondsC < 10 ? "0" + secondsC : secondsC;
+function getRemaining(target, now = Date.now()) {
+  const total = Math.max(0, Math.floor((target - now) / 1000));
+  return {
+    days: Math.floor(total / 86400),
+    hours: Math.floor(total / 3600) % 24,
+    minutes: Math.floor(total / 60) % 60,
+    seconds: total % 60,
+  };
 }
 
-// Sayaç işlevini her saniyede bir çağıran bir zamanlayıcı başlat
-setInterval(updateCountdown, 1000);
+function calendarEvent(title, target) {
+  const escape = value => value.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;');
+  const stamp = date => new Date(date).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  // Bu hatırlatma tam gün olarak eklenir; varsayılan saat oy verme saati değildir.
+  const day = new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Istanbul', year: 'numeric', month: '2-digit', day: '2-digit'}).format(new Date(target)).replace(/-/g, '');
+  const following = new Date(Date.UTC(Number(day.slice(0, 4)), Number(day.slice(4, 6)) - 1, Number(day.slice(6, 8)) + 1));
+  return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Election Day Counter//TR', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT',
+    `UID:${day}-${encodeURIComponent(title)}@election-day-counter`, `DTSTAMP:${stamp(Date.now())}`,
+    `DTSTART;VALUE=DATE:${day}`, `DTEND;VALUE=DATE:${stamp(following).slice(0, 8)}`,
+    `SUMMARY:${escape('Tahmini: ' + title)}`, 'DESCRIPTION:Kesinleşmiş seçim tarihi değildir. Resmî takvim için https://www.ysk.gov.tr/ adresini kontrol edin.',
+    'END:VEVENT', 'END:VCALENDAR', ''].join('\r\n');
+}
+
+if (typeof document !== 'undefined') {
+  const cards = Array.from(document.querySelectorAll('[data-election]')).map(card => {
+    const target = Date.parse(card.querySelector('time').dateTime);
+    const title = card.querySelector('h2').textContent;
+    const calendar = card.querySelector('.calendar');
+    if (Number.isFinite(target)) {
+      calendar.hidden = false;
+      calendar.setAttribute('aria-label', `${title}: tahmini tarihi takvime ekle`);
+      calendar.addEventListener('click', () => {
+        const url = URL.createObjectURL(new Blob([calendarEvent(title, target)], {type: 'text/calendar;charset=utf-8'}));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `tahmini-secim-${card.dataset.election}.ics`;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+    }
+    return {card, target, units: Array.from(card.querySelectorAll('[data-unit]')), status: card.querySelector('.status')};
+  });
+  function updateCountdown() {
+    const now = Date.now();
+    cards.forEach(({card, target, units, status}) => {
+      if (!Number.isFinite(target)) {
+        status.textContent = 'Tarih bilgisi güncellenmeli';
+        return;
+      }
+      const remaining = getRemaining(target, now);
+      units.forEach(unit => { unit.textContent = String(remaining[unit.dataset.unit]).padStart(2, '0'); });
+      const expired = target <= now;
+      status.textContent = expired ? 'Hedef tarih geçti · Güncelleme bekleniyor' : 'Hedef tarihe kalan süre';
+      card.querySelector('.calendar').disabled = expired;
+    });
+  }
+  updateCountdown();
+  let timer;
+  function syncTimer() {
+    clearInterval(timer);
+    if (!document.hidden) {
+      updateCountdown();
+      timer = setInterval(updateCountdown, 1000);
+    }
+  }
+  syncTimer();
+  document.addEventListener('visibilitychange', syncTimer);
+
+  const theme = document.querySelector('#theme-toggle');
+  const system = window.matchMedia('(prefers-color-scheme: dark)');
+  let selectedTheme;
+  try { selectedTheme = localStorage.getItem('election-theme'); } catch { /* Depolama kapalıysa sistem teması kullanılır. */ }
+  function applyTheme(value) {
+    document.documentElement.dataset.theme = value;
+    theme.textContent = value === 'dark' ? '☀ Açık tema' : '☾ Koyu tema';
+    theme.setAttribute('aria-label', value === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç');
+  }
+  applyTheme(['light', 'dark'].includes(selectedTheme) ? selectedTheme : system.matches ? 'dark' : 'light');
+  theme.hidden = false;
+  theme.addEventListener('click', () => {
+    selectedTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(selectedTheme);
+    try { localStorage.setItem('election-theme', selectedTheme); } catch { /* Tema bu oturumda çalışmaya devam eder. */ }
+  });
+  system.addEventListener('change', event => { if (!['light', 'dark'].includes(selectedTheme)) applyTheme(event.matches ? 'dark' : 'light'); });
+
+  const share = document.querySelector('#share');
+  share.hidden = false;
+  share.addEventListener('click', async () => {
+    const feedback = document.querySelector('#feedback');
+    if (!/^https?:$/.test(location.protocol)) {
+      feedback.textContent = 'Paylaşmak için paneli bir web adresinden açın.';
+      return;
+    }
+    try {
+      if (navigator.share) await navigator.share({title: document.title, url: location.href});
+      else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(location.href);
+        feedback.textContent = 'Panel bağlantısı kopyalandı.';
+      } else feedback.textContent = 'Adres çubuğundaki bağlantıyı kopyalayabilirsiniz.';
+    } catch (error) {
+      if (error.name !== 'AbortError') feedback.textContent = 'Paylaşılamadı. Adres çubuğundaki bağlantıyı kopyalayabilirsiniz.';
+    }
+  });
+}
+
+if (typeof module !== 'undefined') module.exports = {getRemaining, calendarEvent};
