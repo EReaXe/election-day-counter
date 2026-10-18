@@ -52,6 +52,31 @@
     {
       "file": "izmir-bio.html",
       "sha256": "4e1989b3691c56273b6bb53536163a0889fff74db5f2f400bef9587196b35adb"
+    },
+    {
+      "file": "kayseri.html",
+      "url": "https://www.kayseri.bel.tr/meclis-uyeleri",
+      "sha256": "24cfdddb341ffb5641b7f479d8317a8e7ecd2316e1034ed0772a493ac311f863"
+    },
+    {
+      "file": "trabzon.html",
+      "url": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+      "sha256": "f41375dadfcad5797b2fbbe275839d20fd2acd931f0982e5f493127785589729"
+    },
+    {
+      "file": "konya-members.html",
+      "url": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+      "sha256": "a31d94964397f71524ae7711e814fd505a3d33fb22f1f26c8c06a64961b09ced"
+    },
+    {
+      "file": "mersin-acting.html",
+      "url": "https://www.mersin.bel.tr/haber/mersin-buyuksehir-belediyesi-baskan-vekili-chpnin-adayi-gulsah-yildirim-genc-oldu-1791903220",
+      "sha256": "190a26723e3d995926cd31de22e8150ec38ae47e4e8a5accf54affd48e2ef961"
+    },
+    {
+      "file": "mersin.html",
+      "url": "https://www.mersin.bel.tr/kurumsal/belediye-meclisi",
+      "sha256": "e73951639649fd19bf021ab791f60b36cfac8f5e7a2e2956c96d44e03906ecd5"
     }
   ]
 }

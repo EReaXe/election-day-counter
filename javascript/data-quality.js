@@ -9,6 +9,8 @@
       districtRecords:data.districts.filter(d=>d.mayor).length,
       districtMissing:data.districts.filter(d=>!d.mayor).length,
       officialDistricts:data.districts.filter(d=>d.mayor?.verification==='primary').length,
+      districtPartyReported:data.districts.filter(d=>d.mayor?.verification==='primary'&&d.mayor.currentParty).length,
+      districtPartyMissing:data.districts.filter(d=>d.mayor&&!d.mayor.currentParty).length,
       compilationDistricts:data.districts.filter(d=>d.mayor?.verification==='secondary').length,
       officialProvinces:data.provinces.filter(p=>p.mayor?.verification==='primary').length,
       compilationProvinces:data.provinces.filter(p=>p.mayor?.verification==='secondary').length,

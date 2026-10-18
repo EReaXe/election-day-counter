@@ -4830,14 +4830,45 @@
       "metropolitan": true,
       "website": "https://www.mersin.bel.tr",
       "mayor": {
-        "name": "Vahap Seçer",
+        "name": "Gülşah Yıldırım Genç",
         "party": "CHP",
-        "role": "Belediye başkanı",
-        "source": "https://tr.wikipedia.org/wiki/Türkiye'de_görevde_olan_il_belediye_başkanlarının_listesi",
-        "sourceLabel": "Vikipedi derlemesi",
-        "verification": "secondary",
-        "since": "8 Nisan 2019",
+        "role": "Başkan vekili",
+        "source": "https://www.mersin.bel.tr/haber/mersin-buyuksehir-belediyesi-baskan-vekili-chpnin-adayi-gulsah-yildirim-genc-oldu-1791903220",
+        "sourceLabel": "Mersin resmî başkan vekili seçimi haberi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "CHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Gülşah Yıldırım Genç",
+          "role": "Başkan vekili",
+          "status": "source-reported",
+          "effectiveFrom": "2026-10-13"
+        },
         "claims": [
+          {
+            "name": "Gülşah Yıldırım Genç",
+            "party": "CHP",
+            "role": "Başkan vekili",
+            "source": "https://www.mersin.bel.tr/haber/mersin-buyuksehir-belediyesi-baskan-vekili-chpnin-adayi-gulsah-yildirim-genc-oldu-1791903220",
+            "sourceLabel": "Mersin resmî başkan vekili seçimi haberi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": "2026-10-13",
+            "sourceType": "official"
+          },
+          {
+            "name": "Vahap Seçer",
+            "party": "CHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.mersin.bel.tr/kurumsal/belediye-meclisi",
+            "sourceLabel": "Mersin meclis listesi; görev değişikliği haberinden eski durumu yansıtıyor",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official",
+            "superseded": true
+          },
           {
             "name": "Vahap Seçer",
             "party": "CHP",
@@ -4849,16 +4880,8 @@
             "sourceType": "compilation"
           }
         ],
-        "retrievedAt": "2026-10-18",
-        "lastVerifiedAt": null,
-        "electedParty": null,
-        "currentParty": null,
-        "currentPartyStatus": "unverified",
-        "officeHolder": {
-          "name": "Vahap Seçer",
-          "role": "Belediye başkanı",
-          "status": "unverified"
-        }
+        "effectiveFrom": "2026-10-13",
+        "resolutionNote": "13 Ekim 2026 tarihli resmî görev değişikliği haberi esas alındı. Eski meclis listesindeki Vahap Seçer kaydı güncel görevi yürüten kişi olarak kullanılmadı."
       }
     },
     {
@@ -5027,14 +5050,33 @@
       "metropolitan": true,
       "website": "https://www.kayseri.bel.tr",
       "mayor": {
-        "name": "Memduh Büyükkılıç",
+        "name": "Dr. Memduh BÜYÜKKILIÇ",
         "party": "AK Parti",
         "role": "Belediye başkanı",
-        "source": "https://tr.wikipedia.org/wiki/Türkiye'de_görevde_olan_il_belediye_başkanlarının_listesi",
-        "sourceLabel": "Vikipedi derlemesi",
-        "verification": "secondary",
-        "since": "3 Nisan 2019",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Dr. Memduh BÜYÜKKILIÇ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
         "claims": [
+          {
+            "name": "Dr. Memduh BÜYÜKKILIÇ",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          },
           {
             "name": "Memduh Büyükkılıç",
             "party": "AK Parti",
@@ -5045,17 +5087,7 @@
             "publishedAt": null,
             "sourceType": "compilation"
           }
-        ],
-        "retrievedAt": "2026-10-18",
-        "lastVerifiedAt": null,
-        "electedParty": null,
-        "currentParty": null,
-        "currentPartyStatus": "unverified",
-        "officeHolder": {
-          "name": "Memduh Büyükkılıç",
-          "role": "Belediye başkanı",
-          "status": "unverified"
-        }
+        ]
       }
     },
     {
@@ -6868,7 +6900,36 @@
       "name": "Akçaabat",
       "provinceId": 61,
       "website": "https://www.akcaabat.bel.tr/",
-      "mayor": null
+      "mayor": {
+        "name": "OSMAN NURİ EKİM",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "OSMAN NURİ EKİM",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "OSMAN NURİ EKİM",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1114,
@@ -6961,7 +7022,39 @@
       "name": "Akşehir",
       "provinceId": 42,
       "website": "https://www.aksehir.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ahmet Nuri KÖKSAL",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ahmet Nuri KÖKSAL",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ahmet Nuri KÖKSAL",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1123,
@@ -7168,7 +7261,36 @@
       "name": "Araklı",
       "provinceId": 61,
       "website": "https://www.arakli.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "HÜSEYİN AVNİ COŞKUN ÇEBİ",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "HÜSEYİN AVNİ COŞKUN ÇEBİ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "HÜSEYİN AVNİ COŞKUN ÇEBİ",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1142,
@@ -7261,7 +7383,36 @@
       "name": "Arsin",
       "provinceId": 61,
       "website": "https://www.arsin.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "HAMZA BİLGİN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "HAMZA BİLGİN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "HAMZA BİLGİN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1151,
@@ -7865,7 +8016,39 @@
       "name": "Beyşehir",
       "provinceId": 42,
       "website": "https://www.beysehir.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Adil BAYINDIR",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Adil BAYINDIR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Adil BAYINDIR",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1189,
@@ -8176,7 +8359,39 @@
       "name": "Bozkır",
       "provinceId": 42,
       "website": "https://www.bozkir.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Nazif KARABULUT",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Nazif KARABULUT",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Nazif KARABULUT",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1208,
@@ -8276,7 +8491,36 @@
       "name": "Bünyan",
       "provinceId": 38,
       "website": "https://www.bunyan.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Selahattin METİN",
+        "party": "MHP",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "MHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Selahattin METİN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Selahattin METİN",
+            "party": "MHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1219,
@@ -8304,7 +8548,39 @@
       "name": "Cihanbeyli",
       "provinceId": 42,
       "website": "https://www.cihanbeyli.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Fırat KIZILKAYA",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Fırat KIZILKAYA",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Fırat KIZILKAYA",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1223,
@@ -8586,7 +8862,36 @@
       "name": "Çaykara",
       "provinceId": 61,
       "website": "https://www.https://caykara.bel.tr/",
-      "mayor": null
+      "mayor": {
+        "name": "HANEFİ TOK",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "HANEFİ TOK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "HANEFİ TOK",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1245,
@@ -8771,7 +9076,39 @@
       "name": "Çumra",
       "provinceId": 42,
       "website": "https://www.cumra.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mehmet AYDIN",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mehmet AYDIN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mehmet AYDIN",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1263,
@@ -8884,7 +9221,36 @@
       "name": "Develi",
       "provinceId": 38,
       "website": "https://www.develi.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Adem ŞENGÜL",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Adem ŞENGÜL",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Adem ŞENGÜL",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1276,
@@ -8976,7 +9342,39 @@
       "name": "Doğanhisar",
       "provinceId": 42,
       "website": "https://www.doganhisar.bel.tr/anasayfa",
-      "mayor": null
+      "mayor": {
+        "name": "Ali ÖZTOKLU",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ali ÖZTOKLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ali ÖZTOKLU",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1286,
@@ -9277,7 +9675,39 @@
       "name": "Ereğli",
       "provinceId": 42,
       "website": "https://www.eregli.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ümit AKPINAR",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ümit AKPINAR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ümit AKPINAR",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1313,
@@ -9477,7 +9907,36 @@
       "name": "Felahiye",
       "provinceId": 38,
       "website": "https://www.felahiye.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Şeref GÜLESER",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Şeref GÜLESER",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Şeref GÜLESER",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1331,
@@ -10048,7 +10507,39 @@
       "name": "Hadim",
       "provinceId": 42,
       "website": "https://www.hadim.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mehmet ÇETİNER",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mehmet ÇETİNER",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mehmet ÇETİNER",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1376,
@@ -10305,7 +10796,39 @@
       "name": "Ilgın",
       "provinceId": 42,
       "website": "https://www.ilgin.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ömer APİL",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ömer APİL",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ömer APİL",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1401,
@@ -10391,7 +10914,36 @@
       "name": "İncesu",
       "provinceId": 38,
       "website": "https://www.incesu.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mustafa İLMEK",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Mustafa İLMEK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mustafa İLMEK",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1410,
@@ -10555,7 +11107,39 @@
       "name": "Kadınhanı",
       "provinceId": 42,
       "website": "https://www.kadinhani.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "İrfan KARACA",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "İrfan KARACA",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "İrfan KARACA",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1423,
@@ -10893,7 +11477,39 @@
       "name": "Karapınar",
       "provinceId": 42,
       "website": "https://www.karapinar.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "İbrahim ÖNAL",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "İbrahim ÖNAL",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "İbrahim ÖNAL",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1442,
@@ -11634,7 +12250,39 @@
       "name": "Kulu",
       "provinceId": 42,
       "website": "https://www.kulu.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Abdurrahim SERTDEMİR",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Abdurrahim SERTDEMİR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Abdurrahim SERTDEMİR",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1492,
@@ -11776,7 +12424,36 @@
       "name": "Maçka",
       "provinceId": 61,
       "website": "https://www.macka.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "KORAY KOÇHAN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "KORAY KOÇHAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "KORAY KOÇHAN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1508,
@@ -12350,7 +13027,36 @@
       "name": "Of",
       "provinceId": 61,
       "website": "https://www.of.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "SALİM SALİH SARIALİOĞLU",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "SALİM SALİH SARIALİOĞLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "SALİM SALİH SARIALİOĞLU",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1549,
@@ -12656,7 +13362,36 @@
       "name": "Pınarbaşı",
       "provinceId": 38,
       "website": "https://www.pinarbasi38.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Deniz YAĞAN",
+        "party": "Yeni Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "Yeni Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Deniz YAĞAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Deniz YAĞAN",
+            "party": "Yeni Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1577,
@@ -12855,7 +13590,39 @@
       "name": "Sarayönü",
       "provinceId": 42,
       "website": "https://www.sarayonu.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Necati KOÇ",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Necati KOÇ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Necati KOÇ",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1599,
@@ -12919,7 +13686,36 @@
       "name": "Sarıoğlan",
       "provinceId": 38,
       "website": "https://www.sarioglan.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Bekir AYYILDIRIM",
+        "party": "MHP",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "MHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Bekir AYYILDIRIM",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Bekir AYYILDIRIM",
+            "party": "MHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1604,
@@ -12962,7 +13758,36 @@
       "name": "Sarız",
       "provinceId": 38,
       "website": "https://www.sariz.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ömer Faruk EROĞLU",
+        "party": "CHP",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "CHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Ömer Faruk EROĞLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ömer Faruk EROĞLU",
+            "party": "CHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1606,
@@ -13104,7 +13929,39 @@
       "name": "Seydişehir",
       "provinceId": 42,
       "website": "https://www.seydisehir.bel.tr/",
-      "mayor": null
+      "mayor": {
+        "name": "Hasan USTAOĞLU",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Hasan USTAOĞLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Hasan USTAOĞLU",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1618,
@@ -13491,7 +14348,36 @@
       "name": "Sürmene",
       "provinceId": 61,
       "website": "https://www.surmene.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "HÜSEYİN AZİZOĞLU",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "HÜSEYİN AZİZOĞLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "HÜSEYİN AZİZOĞLU",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1648,
@@ -13891,14 +14777,72 @@
       "name": "Tomarza",
       "provinceId": 38,
       "website": "https://www.tomarza.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Osman KOÇ",
+        "party": "İYİ Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "İYİ Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Osman KOÇ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Osman KOÇ",
+            "party": "İYİ Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1681,
       "name": "Tonya",
       "provinceId": 61,
       "website": "https://www.tonya.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "OSMAN BEŞEL",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "OSMAN BEŞEL",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "OSMAN BEŞEL",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1682,
@@ -14256,7 +15200,36 @@
       "name": "Vakfıkebir",
       "provinceId": 61,
       "website": "https://www.vakfikebir.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "FUAT KOÇAL",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "FUAT KOÇAL",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "FUAT KOÇAL",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1711,
@@ -14291,7 +15264,36 @@
       "name": "Yahyalı",
       "provinceId": 38,
       "website": "https://www.yahyali.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Esat ÖZTÜRK",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Esat ÖZTÜRK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Esat ÖZTÜRK",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1716,
@@ -14492,7 +15494,36 @@
       "name": "Yeşilhisar",
       "provinceId": 38,
       "website": "https://www.yesilhisar.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Halit TAŞYAPAN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Halit TAŞYAPAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Halit TAŞYAPAN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1728,
@@ -14527,7 +15558,36 @@
       "name": "Yomra",
       "provinceId": 61,
       "website": "https://www.yomra.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "MUSTAFA BIYIK",
+        "party": "Yeni Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "Yeni Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "MUSTAFA BIYIK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "MUSTAFA BIYIK",
+            "party": "Yeni Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1733,
@@ -14578,7 +15638,39 @@
       "name": "Yunak",
       "provinceId": 42,
       "website": "https://www.yunak.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Subhan GÜNALTAY",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Subhan GÜNALTAY",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Subhan GÜNALTAY",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1736,
@@ -14901,14 +15993,75 @@
       "name": "Akkışla",
       "provinceId": 38,
       "website": "https://www.akkisla.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mustafa DURSUN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Mustafa DURSUN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mustafa DURSUN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1753,
       "name": "Akören",
       "provinceId": 42,
       "website": "https://www.akoren.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "İsmail ARSLAN",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "İsmail ARSLAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "İsmail ARSLAN",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1754,
@@ -14986,7 +16139,39 @@
       "name": "Altınekin",
       "provinceId": 42,
       "website": "https://www.altinekin.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Fatih ORHAN",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Fatih ORHAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Fatih ORHAN",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1761,
@@ -15091,7 +16276,36 @@
       "name": "Beşikdüzü",
       "provinceId": 61,
       "website": "https://www.besikduzu.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "BURHAN CAHİT ERDEM",
+        "party": "Yeni Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "Yeni Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "BURHAN CAHİT ERDEM",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "BURHAN CAHİT ERDEM",
+            "party": "Yeni Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1776,
@@ -15334,7 +16548,39 @@
       "name": "Derebucak",
       "provinceId": 42,
       "website": "https://www.derebucak.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ahmet KISA",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ahmet KISA",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ahmet KISA",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1790,
@@ -15468,7 +16714,39 @@
       "name": "Hüyük",
       "provinceId": 42,
       "website": "https://www.huyuk.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Sadık SEFER",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Sadık SEFER",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Sadık SEFER",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1805,
@@ -15596,7 +16874,39 @@
       "name": "Karatay",
       "provinceId": 42,
       "website": "https://www.karatay@karatay.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Hasan KILCA",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Hasan KILCA",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Hasan KILCA",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1815,
@@ -15803,7 +17113,39 @@
       "name": "Meram",
       "provinceId": 42,
       "website": "https://www.meram.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mustafa KAVUŞ",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mustafa KAVUŞ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mustafa KAVUŞ",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1828,
@@ -16003,7 +17345,39 @@
       "name": "Selçuklu",
       "provinceId": 42,
       "website": "https://www.selcuklu.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ahmet PEKYATIRMACI",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ahmet PEKYATIRMACI",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ahmet PEKYATIRMACI",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1840,
@@ -16024,7 +17398,36 @@
       "name": "Şalpazarı",
       "provinceId": 61,
       "website": "https://www.salpazari.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "REFİK KURUKIZ",
+        "party": "MHP",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "MHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "REFİK KURUKIZ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "REFİK KURUKIZ",
+            "party": "MHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1843,
@@ -16052,7 +17455,36 @@
       "name": "Talas",
       "provinceId": 38,
       "website": "https://www.talas.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mustafa YALÇIN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Mustafa YALÇIN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mustafa YALÇIN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1847,
@@ -16066,7 +17498,39 @@
       "name": "Taşkent",
       "provinceId": 42,
       "website": "https://www.taskent.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mehmet ACAR",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mehmet ACAR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mehmet ACAR",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1849,
@@ -16229,14 +17693,72 @@
       "name": "Kocasinan",
       "provinceId": 38,
       "website": "https://www.kocasinan.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ahmet ÇOLAKBAYRAKDAR",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Ahmet ÇOLAKBAYRAKDAR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ahmet ÇOLAKBAYRAKDAR",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1864,
       "name": "Melikgazi",
       "provinceId": 38,
       "website": "https://www.melikgazi.bel.tr/",
-      "mayor": null
+      "mayor": {
+        "name": "H. Mustafa PALANCIOĞLU",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "H. Mustafa PALANCIOĞLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "H. Mustafa PALANCIOĞLU",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1865,
@@ -16264,7 +17786,39 @@
       "name": "Ahırlı",
       "provinceId": 42,
       "website": "https://www.ahirli.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ali ÜZLÜK",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ali ÜZLÜK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ali ÜZLÜK",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1869,
@@ -16518,7 +18072,36 @@
       "name": "Çarşıbaşı",
       "provinceId": 61,
       "website": "https://www.carsibasi.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "AHMET KELEŞ",
+        "party": "MHP",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "MHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "AHMET KELEŞ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "AHMET KELEŞ",
+            "party": "MHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1897,
@@ -16560,7 +18143,39 @@
       "name": "Çeltik",
       "provinceId": 42,
       "website": "https://www.celtik.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ali MEŞE",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ali MEŞE",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ali MEŞE",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1903,
@@ -16595,7 +18210,39 @@
       "name": "Derbent",
       "provinceId": 42,
       "website": "https://www.derbent.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Hüseyin AYTEN",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Hüseyin AYTEN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Hüseyin AYTEN",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1908,
@@ -16609,7 +18256,36 @@
       "name": "Dernekpazarı",
       "provinceId": 61,
       "website": "https://www.dernekpazari.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "MEHMET AŞIK",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "MEHMET AŞIK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "MEHMET AŞIK",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1910,
@@ -16665,7 +18341,36 @@
       "name": "Düzköy",
       "provinceId": 61,
       "website": "https://www.duzkoy.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "SELİM ÇELENK",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "SELİM ÇELENK",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "SELİM ÇELENK",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1918,
@@ -16686,7 +18391,39 @@
       "name": "Emirgazi",
       "provinceId": 42,
       "website": "https://www.emirgazi.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Mesut MERTCAN",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mesut MERTCAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mesut MERTCAN",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1921,
@@ -16845,7 +18582,39 @@
       "name": "Güneysınır",
       "provinceId": 42,
       "website": "https://www.guneysinir.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Ahmet DEMİR",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Ahmet DEMİR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Ahmet DEMİR",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1934,
@@ -16924,14 +18693,75 @@
       "name": "Hacılar",
       "provinceId": 38,
       "website": "https://www.hacilar.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Bilal ÖZDOĞAN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Bilal ÖZDOĞAN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Bilal ÖZDOĞAN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1937,
       "name": "Halkapınar",
       "provinceId": 42,
       "website": "https://www.halkapinar.bel.tr/",
-      "mayor": null
+      "mayor": {
+        "name": "Mehmet VARDAR",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mehmet VARDAR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mehmet VARDAR",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1938,
@@ -16995,7 +18825,36 @@
       "name": "Hayrat",
       "provinceId": 61,
       "website": "https://www.hayrat.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "MEHMET NUHOĞLU",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "MEHMET NUHOĞLU",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "MEHMET NUHOĞLU",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1943,
@@ -17221,7 +19080,36 @@
       "name": "Köprübaşı",
       "provinceId": 61,
       "website": "https://www..trabzonkoprubasi.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "ALİ AYDIN",
+        "party": "AK Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "AK Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "ALİ AYDIN",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "ALİ AYDIN",
+            "party": "AK Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1967,
@@ -17334,7 +19222,36 @@
       "name": "Özvatan",
       "provinceId": 38,
       "website": "https://www.ozvatan.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Halit DEMİR",
+        "party": "MHP",
+        "role": "Belediye başkanı",
+        "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+        "sourceLabel": "Kayseri resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "MHP",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "Halit DEMİR",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Halit DEMİR",
+            "party": "MHP",
+            "role": "Belediye başkanı",
+            "source": "https://www.kayseri.bel.tr/meclis-uyeleri",
+            "sourceLabel": "Kayseri resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 1979,
@@ -17418,7 +19335,39 @@
       "name": "Tuzlukçu",
       "provinceId": 42,
       "website": "https://www.tuzlukcu.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "Nurettin AKBUĞA",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Nurettin AKBUĞA",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Nurettin AKBUĞA",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1991,
@@ -17446,7 +19395,39 @@
       "name": "Yalıhüyük",
       "provinceId": 42,
       "website": "https://www.yalihuyuk.bel.tr/",
-      "mayor": null
+      "mayor": {
+        "name": "Mehmet Ali YILMAZ",
+        "party": null,
+        "role": "Belediye başkanı",
+        "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+        "sourceLabel": "Konya resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": null,
+        "currentPartyStatus": "unverified",
+        "officeHolder": {
+          "name": "Mehmet Ali YILMAZ",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "Mehmet Ali YILMAZ",
+            "party": null,
+            "role": "Belediye başkanı",
+            "source": "https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri",
+            "sourceLabel": "Konya resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ],
+        "fieldNotes": {
+          "currentParty": "Kaynak listesi parti bilgisi vermiyor; alan boş bırakıldı."
+        }
+      }
     },
     {
       "id": 1995,
@@ -19168,7 +21149,36 @@
       "name": "Ortahisar",
       "provinceId": 61,
       "website": "https://www.trabzonortahisar.bel.tr",
-      "mayor": null
+      "mayor": {
+        "name": "AHMET KAYA",
+        "party": "Yeni Parti",
+        "role": "Belediye başkanı",
+        "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+        "sourceLabel": "Trabzon resmî meclis listesi",
+        "verification": "primary",
+        "retrievedAt": "2026-10-18",
+        "lastVerifiedAt": null,
+        "electedParty": null,
+        "currentParty": "Yeni Parti",
+        "currentPartyStatus": "source-reported",
+        "officeHolder": {
+          "name": "AHMET KAYA",
+          "role": "Belediye başkanı",
+          "status": "source-reported"
+        },
+        "claims": [
+          {
+            "name": "AHMET KAYA",
+            "party": "Yeni Parti",
+            "role": "Belediye başkanı",
+            "source": "https://www.trabzon.bel.tr/Web/MeclisUyeleri",
+            "sourceLabel": "Trabzon resmî meclis listesi",
+            "retrievedAt": "2026-10-18",
+            "publishedAt": null,
+            "sourceType": "official"
+          }
+        ]
+      }
     },
     {
       "id": 2098,
@@ -19662,6 +21672,341 @@
         "provinceId": 26,
         "district": "HAN",
         "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": null,
+        "change": "official-source-updated"
+      },
+      {
+        "provinceId": 38,
+        "district": "Melikgazi",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Kocasinan",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Talas",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Hacılar",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "İncesu",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Develi",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Bünyan",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Pınarbaşı",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Tomarza",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Yeşilhisar",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Sarıoğlan",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Sarız",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Yahyalı",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Felahiye",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Akkışla",
+        "change": "added"
+      },
+      {
+        "provinceId": 38,
+        "district": "Özvatan",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Akçaabat",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Araklı",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Arsin",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Beşikdüzü",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Çarşıbaşı",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Çaykara",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Dernekpazarı",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Düzköy",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Hayrat",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Köprübaşı",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Maçka",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Of",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Ortahisar",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Sürmene",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Şalpazarı",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Tonya",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Vakfıkebir",
+        "change": "added"
+      },
+      {
+        "provinceId": 61,
+        "district": "Yomra",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Ahırlı",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Akören",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Akşehir",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Altınekin",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Beyşehir",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Bozkır",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Cihanbeyli",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Çeltik",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Çumra",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Derbent",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Derebucak",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Doğanhisar",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Emirgazi",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Ereğli",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Güneysınır",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Hadim",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Halkapınar",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Hüyük",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Ilgın",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Kadınhanı",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Karapınar",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Karatay",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Kulu",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Meram",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Sarayönü",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Selçuklu",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Seydişehir",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Taşkent",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Tuzlukçu",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Yalıhüyük",
+        "change": "added"
+      },
+      {
+        "provinceId": 42,
+        "district": "Yunak",
+        "change": "added"
+      },
+      {
+        "provinceId": 33,
+        "district": null,
+        "change": "official-source-updated"
       }
     ]
   }

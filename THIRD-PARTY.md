@@ -45,3 +45,14 @@ https://commons.wikimedia.org/wiki/File:Turkey_provinces_blank_gray.svg
 - İzmir karşılaştırma kaydı (erişilemiyor): https://www.izmir.bel.tr/tr/Ozgecmis/34
 
 Bu kaynaklar 77 yeni ilçe başkanı kaydı sağladı. Belediye meclisi başkan vekilleri, ilçe belediye başkan vekili olduğu açıkça belirtilmedikçe ilçe başkanı olarak alınmadı. Görevden uzaklaştırma satırları aktif başkan kaydı olarak aktarılmadı. Listelerin boş bıraktığı veya bildirmediği bilgiler tahmin edilmedi. HTML dosyalarının parmak izleri `data/source-manifest.json` içinde korunur.
+
+
+## Kayseri, Trabzon ve Konya genişletmesi
+
+- https://www.kayseri.bel.tr/meclis-uyeleri
+- https://www.trabzon.bel.tr/Web/MeclisUyeleri
+- https://www.konya.bel.tr/meclis-encumen/meclis-uyeleri
+- Mersin görev değişikliği: https://www.mersin.bel.tr/haber/mersin-buyuksehir-belediyesi-baskan-vekili-chpnin-adayi-gulsah-yildirim-genc-oldu-1791903220
+- Eski görev bilgisini içeren meclis listesi: https://www.mersin.bel.tr/kurumsal/belediye-meclisi
+
+Kaynak okuma: 18 Ekim 2026. Kayseri, Trabzon ve Konya'dan 65 yeni ilçe başkanı kaydı alındı. Konya kaynağında parti belirtilmediği için 31 parti alanı boş bırakıldı. Mersin'de 13 Ekim 2026 17:52 tarihli resmî haberin bildirdiği görev değişikliği kullanıldı; eski meclis listesinin görev bildirimi güncel kaydın yerine geçirilmedi. Kaynak parmak izleri source-manifest.json içinde korunur.

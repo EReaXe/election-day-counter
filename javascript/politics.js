@@ -30,7 +30,7 @@
   const date = new Intl.DateTimeFormat('tr-TR', {day:'numeric', month:'long', year:'numeric', timeZone:'Europe/Istanbul'}).format(new Date(data.asOf + 'T12:00:00+03:00'));
   $('#snapshot-date').textContent = 'Kaynak okuma · ' + date;
   const quality = window.DATA_QUALITY.summarize(data);
-  $('#coverage-note').textContent = `81 il ve ${quality.districtTotal} ilçe listelenir. ${quality.districtRecords} ilçede başkan kaydı var; ${quality.districtMissing} ilçede kayıt eksik. ${quality.officialDistricts} ilçe kaydı resmî listelerden, ${quality.compilationDistricts} kayıt teyit bekleyen derlemelerden geliyor. Canlı veri yayını değildir.`;
+  $('#coverage-note').textContent = `81 il ve ${quality.districtTotal} ilçe listelenir. ${quality.districtRecords} ilçede başkan kaydı var; ${quality.districtMissing} ilçede kayıt eksik. ${quality.officialDistricts} ilçe kaydı resmî listelerden geliyor; bunların ${quality.districtPartyReported} tanesinde parti bildirimi de var. ${quality.compilationDistricts} kayıt teyit bekleyen derlemelerden geliyor. Canlı veri yayını değildir.`;
   for (const [number,label] of [[quality.officialDistricts,'Resmî kaynaklı ilçe'],[quality.districtMissing,'Eksik ilçe kaydı'],[quality.conflicts,'Çözülemeyen çelişki'],[quality.independentlyVerified,'Bağımsız doğrulama']]) {
     const metric=el('div','quality-metric'); metric.append(el('strong','',number),el('span','',label)); $('#quality-metrics').append(metric);
   }
@@ -124,6 +124,9 @@
     if(record.verification==='secondary' && record.party) container.append(el('p','verification','Derlemenin bildirdiği parti: '+record.party));
     container.append(el('p','verification','Seçildiği parti: '+(record.electedParty || 'Henüz doğrulanmadı')));
     if(record.conflictNote) container.append(el('p','conflict-note',record.conflictNote));
+    if(record.fieldNotes?.currentParty) container.append(el('p','verification',record.fieldNotes.currentParty));
+    if(record.effectiveFrom) container.append(el('p','verification','Bu göreve başlangıç: '+record.effectiveFrom));
+    if(record.resolutionNote) container.append(el('p','verification',record.resolutionNote));
     const source = el('p', 'source-line'); source.append(link(record.sourceLabel + ' ↗', record.source)); container.append(source);
     container.append(el('span', 'verification', record.verification === 'conflict' ? 'Çelişki çözülene kadar kesin parti gösterilmez.' : record.verification === 'secondary' ? 'Derleme kaydı · Resmî teyit bekleniyor' : 'Resmî kaynağın bildirimi · Bağımsız doğrulama yapılmadı'));
     const readDate=record.retrievedAt || data.asOf;
@@ -134,6 +137,8 @@
       for(const claim of record.claims) {
         const line=el('p','source-line');line.append(link(claim.sourceLabel+' ↗',claim.source),document.createTextNode(' · '+claim.name+' · '+(claim.party || 'Parti belirtilmedi')+' · Okuma: '+claim.retrievedAt));
         if(claim.availability==='unavailable') line.append(document.createTextNode(' · Sayfa erişilemiyor; arama dizini kaydı'));
+        if(claim.publishedAt) line.append(document.createTextNode(' · Yayın: '+claim.publishedAt));
+        if(claim.superseded) line.append(document.createTextNode(' · Güncel görev için kullanılmayan eski bildirim'));
         details.append(line);
       }
       container.append(details);
