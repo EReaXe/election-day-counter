@@ -1,0 +1,1 @@
+{"name":"election-day-counter","private":true,"version":"3.0.0","description":"Türkiye seçimlerine kalan süre","scripts":{"test":"node --check javascript/timer.js && node tests/countdown.cjs"},"devDependencies":{"linkedom":"0.18.13"}}
