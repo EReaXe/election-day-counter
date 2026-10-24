@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const {parseHTML}=require('linkedom');const {getRemaining,startCountdown}=require('../javascript/timer.js');
+assert.deepEqual(getRemaining(90061000,0),{days:1,hours:1,minutes:1,seconds:1});assert.deepEqual(getRemaining(0,1000),{days:0,hours:0,minutes:0,seconds:0});
+const root=path.resolve(__dirname,'..'),{document}=parseHTML(fs.readFileSync(path.join(root,'index.html'),'utf8'));const ctx={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'javascript/elections.js'),'utf8'),ctx);
+const dates=ctx.window.ELECTIONS;assert.equal(Object.keys(dates).length,2);
+const general=Date.parse(dates.general),local=Date.parse(dates.local);assert.equal(new Date(general+3*3600000).getUTCDay(),0);assert.equal(new Date(local+3*3600000).getUTCDate(),25);
+let now=general-90061000;const app=startCountdown(document,dates,{now:()=>now});
+assert.equal(document.querySelector('[data-unit="days"]').textContent,'01');assert.equal(document.querySelector('[data-unit="hours"]').textContent,'01');
+now=general+1;app.update();assert.equal(document.querySelector('[data-unit="seconds"]').textContent,'00');assert.match(document.querySelector('.status').textContent,/Yeni takvim/);app.stop();
+const bad=startCountdown(document,{}, {now:()=>now});assert.equal(document.querySelector('[data-unit="days"]').textContent,'—');bad.stop();
+assert.equal(document.querySelectorAll('[data-election]').length,2);assert.equal(document.querySelectorAll('button,select,svg').length,0);
+for(const card of document.querySelectorAll('[data-election]'))assert.equal(card.querySelector('time').getAttribute('datetime'),dates[card.dataset.election]);
+for(const script of document.querySelectorAll('script[src]'))assert(fs.existsSync(path.join(root,script.getAttribute('src'))));
+console.log('Geri sayım, sabit saat dilimi, tarih sınırı, eksik veri ve sade sayfa kontrolleri geçti.');

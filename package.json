@@ -1,15 +1,1 @@
-{
-  "name": "election-day-counter",
-  "private": true,
-  "version": "2.0.0",
-  "description": "TÃ¼rkiye seÃ§im takvimi ve temsil haritasÄ±",
-  "scripts": {
-    "refresh:official": "node scripts/refresh-official.cjs",
-    "sync:data": "node scripts/sync-data.cjs",
-    "test": "node --check javascript/administrative.js && node --check javascript/timer.js && node --check javascript/politics.js && node tests/official-fetch.cjs && node tests/data-quality.cjs && node tests/dashboard.cjs",
-    "refresh:data": "node scripts/refresh-turkiye.cjs"
-  },
-  "devDependencies": {
-    "linkedom": "0.18.13"
-  }
-}
+{"name":"election-day-counter","private":true,"version":"3.0.0","description":"Türkiye seçimlerine kalan süre","scripts":{"test":"node --check javascript/timer.js && node tests/countdown.cjs"},"devDependencies":{"linkedom":"0.18.13"}}

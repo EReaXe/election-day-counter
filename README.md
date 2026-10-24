@@ -1,23 +1,17 @@
-# Türkiye atlası ve seçim paneli
+# Election Day Counter
 
-Yeşil/lime atlas arayüzü, erişilebilir Türkiye haritası ve il/ilçe keşfi. index.html dosyasını açın; kurulum gerekmez.
+Yalnızca Türkiye'deki bir sonraki genel ve yerel seçime kalan süreyi gösterir. index.html dosyasını açın. Derleme veya sunucu gerekmez.
 
-## Veri kaynağı
+Harita, nüfus/belediye/Meclis verileri, API indirme hattı, tema seçimi, paylaşım ve takvim dışa aktarma kaldırılmıştır. Yeni özellik eklenmemiştir.
 
-Kullanıcının seçtiği tek veri sağlayıcı [TurkiyeAPI](https://github.com/ubeydeozdmr/turkiye-api), [belgeler](https://docs.turkiyeapi.dev/). Önceki resmî API kısıtının yerine bu sağlayıcı seçilmiştir. TurkiyeAPI bağımsızdır, devlet API'si olarak sunulmaz. Harita çizimi ayrı lisanslı görsel varlıktır.
+## Tahmini tarihler
 
-Beş koleksiyonun tamamı alınır: 81 il, 973 ilçe, 1.377 belediye, 32.279 mahalle, 18.183 köy. Sayılar indirme anındaki /v2/meta ile doğrulanır. Veri seti 2025, sağlayıcının güncellemesi 2026-05-21; indirme zamanı source-manifest.json içinde ayrıca yer alır. Bunlar bugünkü nüfus veya siyasi görev bilgisi iddiası değildir.
+Kullanıcı onayıyla olağan seçim döneminden hesaplanan tahminler kullanılır. Genel seçim: 7 Mayıs 2028; yerel seçim: 25 Mart 2029. Kesinleşmiş seçim takvimi değildir. Erken seçim/takvim değişikliği farklı tarih gerektirir. Sayaç Türkiye saatiyle 00.00'a gider; oy verme saatini belirtmez.
 
-Harita nüfus aralıklarını gösterir. İl kartları nüfus, alan, rakım, bölge, koordinat ve telefon kodlarını; ilçeler belediyeleri, mahalle/köy aramasını, nüfus ve posta kodlarını gösterir. Yerleşimler ilk açılışta yüklenir ve 50'şer kayıt gösterilir. Yaklaşık posta kodları açıkça etiketlenir. Tüm ham alanlar data/turkiye-api/dataset.json.gz içinde korunur.
+Genel seçim hesabı: [6271 md.3](https://www.ysk.gov.tr/doc/dosyalar/docs/24Haziran2018/2018SecimTakvimi/6271-Secim.pdf), birlikte yapılan 14 Mayıs 2023 seçiminden beş yıl dolmadan önceki son Pazar. Son seçim: [YSK istatistikleri](https://www.ysk.gov.tr/doc/dosyalar/docs/14%20May%C4%B1s%202023%20Cumhurba%C5%9Fkan%C4%B1%20ve%2025.%20D%C3%B6nem%20MV%20Genel%20Se%C3%A7imleri%20%C4%B0statistikleri.pdf). Yerel seçim hesabı: [2972 md.8'i aktaran YSK kararı](https://ysk.gov.tr/doc/karar/dosya/1902/2016-81.pdf), beş yıllık dönemin Mart ayındaki son Pazar.
 
-Kaynak belediye başkanı, parti, Cumhurbaşkanı, milletvekili, sandalye dağılımı veya seçim takvimi sağlamaz. Bu alanlar boş durum gösterir. Eski İzmir kaynağı ve derlemeler aktif veri paketinden kaldırılmıştır.
+Tarihler javascript/elections.js dosyasında, JavaScript kapalıyken görünen karşılıkları index.html içindedir. Tarih değişince ikisini güncelleyin; test eşleşmelerini denetler. Otomatik veri güncellemesi yoktur.
 
-## Yenileme ve doğrulama
+## Kontrol
 
-Node 20+ ile `npm run refresh:data` çalıştırın. /v2/meta ve belgelenmiş /v2/datasets/{koleksiyon}.json dosyaları kullanılır. Sürümlü dosyalar güncel metadata ile farklı olabileceği için son sürüm uçları seçilmiştir. Sayı, tekil kimlik ve tüm üst kayıt ilişkileri doğrulanmadan başarılı paket değiştirilmez. Yönlendirme, HTML yanıtı, HTTP ve JSON hataları reddedilir. Arızada eski paketin tarihi güncellenmez.
-
-`npm run sync:data` yerel paketi yeniden üretir. `refresh:official` geriye uyumlu komut adıdır; artık TurkiyeAPI yenilemesini çağırır, resmî kurum anlamına gelmez. Otomatik/zamanlanmış veya tarayıcıdan canlı veri yenileme yoktur. Sunulan dosyalar son başarılı indirme kopyasıdır.
-
-`npm install` ve `npm test`: API hata durumları, beş koleksiyonun tamlığı/ilişkileri, SHA-256 ve ham veriden birebir yeniden üretim, kaynak kısıtı ve DOM etkileşimleri denetlenir. Görsel tarayıcı kontrolü yapılmadı; file:// gözlem isteği güvenlik politikasıyla engellenmişti.
-
-Lisanslar: THIRD-PARTY.md.
+Node.js ile npm install ve npm test. Testler gün/saat hesabı, geçmiş tarihin sıfırda kalması, eksik tarih, sabit saat dilimi ve sayfanın yalnızca iki sayaç içermesini kontrol eder. Görsel tarayıcı doğrulaması yapılmadı.
